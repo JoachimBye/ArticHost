@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArticHost | Airbnb forvaltning i Tromsø</title>
+<title>ArticHost | Airbnb-forvaltning i Tromsø | Tjen 2 til 3× mer med din bolig</title>
 <meta name="description" content="Profesjonell Airbnb-forvaltning i Tromsø. Vi tar oss av alt fra fotografering til gjestekommunikasjon, med full åpenhet og sanntidsinnsyn. Få en gratis vurdering.">
 
-<!-- Open Graph -->
 <meta property="og:title" content="ArticHost | Airbnb-forvaltning i Tromsø">
 <meta property="og:description" content="Profesjonell Airbnb-forvaltning i Tromsø. Vi tar oss av alt fra A til Å, med full åpenhet og sanntidsinnsyn.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
-<meta property="og:url" content="https://ArticHost.no">
-<!-- <meta property="og:image" content="https://ArticHost.no/og-image.jpg"> -->
-
-<link rel="canonical" href="https://ArticHost.no">
+<meta property="og:url" content="https://artichost.no">
+<link rel="canonical" href="https://artichost.no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Structured Data: LocalBusiness -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "ArticHost AS",
   "description": "Profesjonell Airbnb-forvaltning i Tromsø. Fullservice korttidsleie med dynamisk prising, gjestekommunikasjon og sanntidsinnsyn for boligeiere.",
-  "url": "https://ArticHost.no",
+  "url": "https://artichost.no",
   "telephone": "+47 000 00 000",
-  "email": "hei@ArticHost.no",
+  "email": "hei@artichost.no",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Storgata 00",
@@ -43,7 +39,6 @@
 }
 </script>
 
-<!-- Structured Data: FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,7 +129,7 @@ img { display: block; width: 100%; object-fit: cover; }
   font-family: var(--sans); font-size: 0.75rem; font-weight: 500;
   color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
 }
-.photo-placeholder .ph-sub { font-size: 0.7rem; color: #8A857E; }
+.photo-placeholder .ph-sub { font-size: 0.7rem; color: var(--muted); }
 .photo-placeholder .ph-badge {
   position: absolute; top: 12px; left: 12px;
   background: var(--accent); color: #fff;
@@ -170,12 +165,13 @@ nav {
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-cta {
-  background: var(--accent); color: #fff !important;
+  background: var(--accent); color: #fff;
   padding: 0.55rem 1.3rem; border-radius: 6px;
-  font-weight: 500 !important; font-size: 0.85rem !important;
-  transition: background 0.2s !important;
+  font-weight: 500; font-size: 0.85rem;
+  transition: background 0.2s;
 }
-.nav-cta:hover { background: var(--accent-hover) !important; color: #fff !important; }
+.nav-links .nav-cta { color: #fff; }
+.nav-links .nav-cta:hover { background: var(--accent-hover); color: #fff; }
 .nav-phone {
   font-size: 0.82rem; color: var(--accent); font-weight: 500;
   text-decoration: none; display: flex; align-items: center; gap: 0.3rem;
@@ -212,10 +208,10 @@ nav {
 }
 .mobile-overlay a:hover { color: var(--accent); }
 .mobile-overlay .mob-cta {
-  background: var(--accent); color: #fff !important;
+  background: var(--accent); color: #fff;
   padding: 0.9rem 2.2rem; border-radius: 6px;
-  font-family: var(--sans) !important; font-weight: 500 !important;
-  font-size: 1rem !important;
+  font-family: var(--sans); font-weight: 500;
+  font-size: 1rem;
 }
 
 /* ─── HERO ─── */
@@ -434,6 +430,35 @@ input[type="range"]::-moz-range-track {
 .calc-market-box p { font-size: 0.82rem; color: var(--ink-mid); line-height: 1.7; }
 .calc-market-box strong { color: var(--ink); }
 .calc-market-box .accent { color: var(--accent); }
+
+/* ─── CALCULATOR DETAIL TOGGLE ─── */
+.detail-toggle {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.4rem; width: 100%;
+  padding: 0.8rem; margin-top: 0.8rem;
+  background: none; border: 1px solid var(--border);
+  border-radius: 8px; cursor: pointer;
+  font-family: var(--sans); font-size: 0.82rem;
+  color: var(--accent); font-weight: 500;
+  transition: background 0.2s, border-color 0.2s;
+}
+.detail-toggle:hover { background: var(--off-white); border-color: var(--accent); }
+.detail-toggle[aria-expanded="true"] .detail-arrow { transform: rotate(180deg); }
+.detail-arrow { transition: transform 0.3s; }
+.detail-panel {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.detail-panel.open { max-height: 600px; margin-top: 0.8rem; }
+
+/* ─── TRUST BAR MOBILE SCROLL INDICATOR ─── */
+.trust-bar { position: relative; }
+.trust-bar::after {
+  content: ''; display: none;
+  position: absolute; right: 0; top: 0; bottom: 0; width: 40px;
+  background: linear-gradient(to right, transparent, var(--off-white));
+  pointer-events: none;
+}
 
 /* ─── HOW IT WORKS ─── */
 .hiw-section { padding: 7rem 0; background: var(--off-white); }
@@ -692,7 +717,22 @@ hr.price-divider { border: none; border-top: 1px solid var(--border); margin-bot
 }
 .cta-section .section-label { color: rgba(255,255,255,0.55); }
 .cta-section h2 { color: white; margin-bottom: 1rem; }
-.cta-section p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 2.5rem; }
+.cta-section p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 1.5rem; }
+.cta-form-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.75rem; max-width: 500px; margin: 0 auto;
+}
+.cta-input {
+  width: 100%; padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px; color: white; font-family: var(--sans); font-size: 0.88rem;
+  outline: none; transition: border-color 0.2s;
+}
+.cta-input::placeholder { color: rgba(255,255,255,0.45); }
+.cta-input:focus { border-color: rgba(255,255,255,0.5); }
+.cta-select { appearance: none; cursor: pointer; }
+.cta-select option { color: #000; }
+.cta-input.cta-error { border-color: #E8453C; }
 .btn-white {
   display: inline-flex; align-items: center; gap: 0.4rem;
   background: white; color: var(--accent);
@@ -704,6 +744,9 @@ hr.price-divider { border: none; border-top: 1px solid var(--border); margin-bot
 }
 .btn-white:hover { background: var(--off-white); transform: translateY(-1px); }
 .cta-note { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 1.2rem; }
+.cta-success { display: none; }
+.cta-success.visible { display: block; }
+.cta-success h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 400; color: white; }
 
 /* ─── FOOTER ─── */
 footer {
@@ -785,6 +828,13 @@ footer {
   .trust-item:last-child { border-right: none; }
   .trust-bar-inner::-webkit-scrollbar { display: none; }
   
+  /* Trust bar scroll indicator */
+  .trust-bar::after { display: block; }
+  
+  /* Calculator: show tool before text on mobile */
+  .calc-grid { display: flex; flex-direction: column; }
+  .calc-grid > div:last-child { order: -1; }
+
   .hiw-step:first-child, .hiw-step:last-child { border-radius: 0; }
   .hiw-step:first-child { border-radius: 10px 10px 0 0; }
   .hiw-step:last-child { border-radius: 0 0 10px 10px; }
@@ -798,10 +848,11 @@ footer {
   .faq-section { padding: 3.5rem 0; }
   .price-section { padding: 4.5rem 0; }
   .cta-section { padding: 4.5rem 0; }
+  .cta-form-grid { grid-template-columns: 1fr; }
   
   /* Team: compact layout on mobile */
   .team-grid { grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
-  .team-photo img { min-height: 200px !important; max-height: 240px; }
+  .team-photo img { min-height: 200px; max-height: 240px; }
   .team-name { font-size: 1rem; }
   .team-bio { font-size: 0.8rem; line-height: 1.65; }
   
@@ -835,7 +886,6 @@ footer {
 </head>
 <body>
 
-<!-- NAV (single nav element) -->
 <nav aria-label="Hovednavigasjon">
   <div class="nav-inner">
     <a href="#" class="logo" aria-label="ArticHost, til forsiden">Artic<span>Host</span></a>
@@ -853,7 +903,6 @@ footer {
   </div>
 </nav>
 
-<!-- MOBILE NAV OVERLAY (inside same conceptual nav) -->
 <div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-label="Mobilmeny">
   <a href="#kalkulator" class="mob-link">Inntekt</a>
   <a href="#slik-virker-det" class="mob-link">Prosess</a>
@@ -863,7 +912,6 @@ footer {
   <a href="kontakt.html" class="mob-cta mob-link">Gratis vurdering</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" aria-label="Introduksjon">
   <div class="hero-left">
     <div class="eyebrow" aria-hidden="true">Airbnb-forvaltning · Tromsø</div>
@@ -881,7 +929,7 @@ footer {
   </div>
 
   <div class="hero-right">
-    <img src="bilde3.webp" alt="Panoramabilde av Tromsø med fjord og snødekte fjell" class="hero-img" loading="eager">
+    <img src="bilde3.webp" alt="Panoramabilde av Tromsø med fjord og snødekte fjell" class="hero-img" loading="eager" fetchpriority="high">
     <div class="hero-stat-card" role="group" aria-label="Nøkkeltall">
       <div class="hs-item">
         <div class="hs-num">24<span>/7</span></div>
@@ -899,7 +947,6 @@ footer {
   </div>
 </section>
 
-<!-- TRUST BAR -->
 <section class="trust-bar" aria-label="Tillitselementer">
   <div class="trust-bar-inner">
     <div class="trust-item">
@@ -919,8 +966,8 @@ footer {
     <div class="trust-item">
       <svg class="trust-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5H2v7l6.29 6.29a1 1 0 001.42 0l5.58-5.58a1 1 0 000-1.42L9 5z"/><circle cx="6" cy="9" r="1" fill="currentColor"/></svg>
       <div>
-        <div class="trust-text-title">Profesjonelt renhold</div>
-        <div class="trust-text-sub">Dedikert team etter hvert opphold</div>
+        <div class="trust-text-title">Skadeforsikring inkludert</div>
+        <div class="trust-text-sub">Airbnbs Host Damage Protection, opptil $3M</div>
       </div>
     </div>
     <div class="trust-item">
@@ -933,20 +980,16 @@ footer {
   </div>
 </section>
 
-<!-- CALCULATOR -->
+<div class="container" style="padding-top: 5rem;">
+  <div class="section-label">Inntektskalkulator</div>
+  <h2>Hva kan din bolig faktisk tjene?</h2>
+  <p class="section-sub">De fleste boligeiere i Tromsø undervurderer hva boligen deres kan tjene. Prøv kalkulatoren og se et realistisk estimat basert på markedsdata.</p>
+</div>
+
 <section class="calc-section" id="kalkulator" aria-label="Inntektskalkulator">
   <div class="container">
     <div class="calc-grid">
-      <div class="calc-left">
-        <div class="section-label">Inntektskalkulator</div>
-        <h2>Hva kan din bolig faktisk tjene?</h2>
-        <p class="section-sub">De fleste boligeiere i Tromsø undervurderer hva boligen deres kan tjene. Prøv kalkulatoren og se et realistisk estimat basert på markedsdata.</p>
-        <div class="calc-market-box">
-          <p>
-            <strong>Tromsø er et av Norges raskest voksende Airbnb-markeder.</strong> AirDNA gir markedet en score på 87/100, noe som plasserer oss i topp 9 % i Nord-Europa. I nordlyssesongen kan de best posisjonerte boligene oppnå <strong class="accent">NOK 4 000 til 9 000/natt</strong> i desember og januar.
-          </p>
-        </div>
-      </div>
+      <div class="calc-left"></div>
 
       <div>
         <div class="calc-card">
@@ -955,57 +998,69 @@ footer {
             <input type="range" id="rooms" min="1" max="5" value="2">
             <div class="range-labels"><span>1 rom</span><span>5 rom</span></div>
           </div>
-          <div class="input-group">
-            <label for="season">Sesong <span class="range-val" id="season-val">Helårs (12 mnd)</span></label>
-            <select id="season" style="width:100%; padding:0.7rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:var(--sans); font-size:0.85rem; color:var(--ink); background:white; cursor:pointer; appearance:auto;">
-              <option value="winter">Nordlyssesongen (nov til mar, 5 mnd)</option>
-              <option value="full" selected>Helårs (12 mnd)</option>
-              <option value="custom">Egendefinert antall måneder</option>
-            </select>
-          </div>
-          <div class="input-group" id="months-group" style="display:none;">
-            <label for="months">Antall måneder <span class="range-val" id="months-val">8 måneder</span></label>
-            <input type="range" id="months" min="3" max="12" value="8">
-            <div class="range-labels"><span>3 mnd</span><span>12 mnd</span></div>
-          </div>
           <div class="result-panel">
             <div class="result-label">Estimert nettoinntekt per år</div>
             <div class="result-num" id="income-result">NOK 258 000</div>
-            <div class="result-breakdown">
-              <div class="result-breakdown-item">
-                <div class="result-breakdown-val" id="gross-val">NOK 303 000</div>
-                <div class="result-breakdown-lbl">Brutto inntekt</div>
-              </div>
-              <div class="result-breakdown-item">
-                <div class="result-breakdown-val" id="commission-val">– NOK 45 000</div>
-                <div class="result-breakdown-lbl">Provisjon (15 %)</div>
-              </div>
-            </div>
-            <div class="result-sub">Ekskl. renholdsgebyr (belastes gjest) · Før skatt</div>
+            <div class="result-sub">Helårs utleie · etter 15 % provisjon · før skatt</div>
           </div>
         </div>
 
-        <div class="compare-box">
-          <div class="compare-rows">
-            <div class="compare-row">
-              <div class="compare-row-header">
-                <span class="clabel">Langtidsleie (estimert, 12 mnd.)</span>
-                <span class="cval" id="longterm-val">NOK 126 000/år</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill bar-light" id="longterm-bar" style="width:40%"></div></div>
+        <button class="detail-toggle" id="detail-toggle" aria-expanded="false">
+          <span id="detail-toggle-text">Vis detaljer og sesongvalg</span>
+          <svg class="detail-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+
+        <div class="detail-panel" id="detail-panel">
+          <div class="calc-card" style="margin-bottom:1rem;">
+            <div class="input-group" style="margin-bottom:1.2rem;">
+              <label for="season">Sesong <span class="range-val" id="season-val">Helårs (12 mnd)</span></label>
+              <select id="season" style="width:100%; padding:0.7rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:var(--sans); font-size:0.85rem; color:var(--ink); background:white; cursor:pointer; appearance:auto;">
+                <option value="winter">Nordlyssesongen (nov til mar, 5 mnd)</option>
+                <option value="full" selected>Helårs (12 mnd)</option>
+                <option value="custom">Egendefinert antall måneder</option>
+              </select>
             </div>
-            <div class="compare-row">
-              <div class="compare-row-header">
-                <span class="clabel">Med ArticHost</span>
-                <span class="cval" id="airbnb-val">NOK 258 000/år</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill bar-accent" id="airbnb-bar" style="width:100%"></div></div>
+            <div class="input-group" id="months-group" style="display:none; margin-bottom:0;">
+              <label for="months">Antall måneder <span class="range-val" id="months-val">8 måneder</span></label>
+              <input type="range" id="months" min="3" max="12" value="8">
+              <div class="range-labels"><span>3 mnd</span><span>12 mnd</span></div>
             </div>
-            <div class="compare-note" id="multiplier">2,0× mer enn langtidsleie</div>
+            <div style="display:flex; gap:1.5rem; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border);">
+              <div>
+                <div style="font-size:0.88rem; font-weight:500; color:var(--ink);" id="gross-val">NOK 303 000</div>
+                <div style="font-size:0.7rem; color:var(--muted);">Brutto inntekt</div>
+              </div>
+              <div>
+                <div style="font-size:0.88rem; font-weight:500; color:var(--ink);" id="commission-val">– NOK 45 000</div>
+                <div style="font-size:0.7rem; color:var(--muted);">Provisjon (15 %)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare-box">
+            <div class="compare-rows">
+              <div class="compare-row">
+                <div class="compare-row-header">
+                  <span class="clabel">Langtidsleie (estimert, 12 mnd.)</span>
+                  <span class="cval" id="longterm-val">NOK 126 000/år</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill bar-light" id="longterm-bar" style="width:40%"></div></div>
+              </div>
+              <div class="compare-row">
+                <div class="compare-row-header">
+                  <span class="clabel">Med ArticHost</span>
+                  <span class="cval" id="airbnb-val">NOK 258 000/år</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill bar-accent" id="airbnb-bar" style="width:100%"></div></div>
+              </div>
+              <div class="compare-note" id="multiplier">2,0× mer enn langtidsleie</div>
+               <p class="calc-disclaimer">
+          * Estimatene er basert på AirDNA-markedsdata for Tromsø med sesongvekting. Nordlyssesongen (nov til mar) vektes ~40 % høyere, sommermånedene ~30 % lavere enn snittet. Faktisk inntekt avhenger av beliggenhet, standard og tilgjengelighet. Inntekter kan være skattepliktige, se <a href="https://www.skatteetaten.no" target="_blank" rel="noopener">Skatteetaten.no</a> for detaljer. Langtidsleie-sammenligningen gjelder 12 måneder.
+        </p>
+            </div>
           </div>
         </div>
 
-        <!-- CTA direkte under kalkulator -->
         <div class="calc-cta-box">
           <p><strong>Vil du vite nøyaktig hva din bolig kan tjene?</strong> Vi gir deg et detaljert estimat basert på din adresse, helt gratis.</p>
           <a href="kontakt.html" class="btn-white-sm">
@@ -1014,17 +1069,12 @@ footer {
           </a>
         </div>
 
-        <p class="calc-disclaimer">
-          * Estimatene er basert på AirDNA-markedsdata for Tromsø med sesongvekting. Nordlyssesongen (nov til mar) vektes ~40 % høyere, sommermånedene ~30 % lavere enn snittet. Faktisk inntekt avhenger av beliggenhet, standard og tilgjengelighet. Inntekter kan være skattepliktige, se <a href="https://www.skatteetaten.no" target="_blank" rel="noopener">Skatteetaten.no</a> for detaljer. Langtidsleie-sammenligningen gjelder 12 måneder.
-        </p>
-
 
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="hiw-section" id="slik-virker-det" aria-label="Slik fungerer det">
   <div class="container">
     <div class="hiw-intro">
@@ -1057,7 +1107,6 @@ footer {
   </div>
 </section>
 
-<!-- TROMSØ PHOTO SECTION -->
 <section class="photo-section" aria-label="Lokalkunnskap">
   <div class="container">
     <div class="photo-text-grid">
@@ -1082,14 +1131,14 @@ footer {
             <svg class="feature-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
             <div>
               <div class="feature-card-title">91 % internasjonale gjester</div>
-              <div class="feature-card-desc">Tromsø tiltrekker reisende fra hele verden. Vi annonserer på alle store plattformer.</div>
+              <div class="feature-card-desc">Tromsø tiltrekker reisende fra hele verden. Vi annonserer på alle store plattformer. <span style="font-size:0.72rem; color:#999;">(Kilde: Airbtics)</span></div>
             </div>
           </div>
           <div class="feature-card">
             <svg class="feature-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
             <div>
               <div class="feature-card-title">Profesjonell fotografering inkludert</div>
-              <div class="feature-card-desc">Gode bilder gjør en enorm forskjell. Boliger med profesjonelle bilder får i snitt 26 % høyere pris per natt.</div>
+              <div class="feature-card-desc">Gode bilder gjør en enorm forskjell. Boliger med profesjonelle bilder får i snitt 26 % høyere pris per natt. <span style="font-size:0.72rem; color:#999;">(Kilde: Airbnb)</span></div>
             </div>
           </div>
         </div>
@@ -1098,7 +1147,6 @@ footer {
   </div>
 </section>
 
-<!-- TRANSPARENCY / DASHBOARD -->
 <section class="transp-section" id="innsyn" aria-label="Eierdashboard og transparens">
   <div class="container">
     <div class="transp-grid">
@@ -1125,7 +1173,7 @@ footer {
             <div class="tp-num">03</div>
             <div>
               <div class="tp-title">Direkte linje til din forvalter</div>
-              <div class="tp-desc">Ikke et call senter. Du kommuniserer direkte med en navngitt person som kjenner din bolig. Svar innen 2 timer.</div>
+              <div class="tp-desc">Ikke et call-senter. Du kommuniserer direkte med en navngitt person som kjenner din bolig. Svar innen 2 timer.</div>
             </div>
           </div>
           <div class="transp-point">
@@ -1201,18 +1249,17 @@ footer {
   </div>
 </section>
 
-<!-- TEAM -->
 <section class="team-section" id="om-oss" aria-label="Om oss">
   <div class="container">
     <div class="section-label">Menneskene bak</div>
-    <h2>To lokale Tromsø folk<br>som kjenner markedet.</h2>
-    <p class="section-sub">Vi er ikke et anonymt call senter. Du vet hvem som tar vare på boligen din, og du kan alltid nå oss direkte.</p>
+    <h2>To lokale Tromsø-folk<br>som kjenner markedet.</h2>
+    <p class="section-sub">Vi er ikke et anonymt call-senter. Du vet hvem som tar vare på boligen din, og du kan alltid nå oss direkte.</p>
     <div class="team-grid">
       <div class="team-card fade-up">
         <div class="team-photo">
           <img src="bilde2.png" alt="Portrett av gründer, ansvarlig for kunderelasjoner" loading="lazy">
         </div>
-        <div class="team-name">Joachim Nordmo Bye</div>
+        <div class="team-name">Joachim Nordmo Bye og Markus Aleksander Langgård</div>
         <div class="team-role">Ansvarlig for kunderelasjoner</div>
         <p class="team-bio">Oppvokst i Tromsø. Jeg har ansvaret for kontakten med deg som eier, kontrakter og inntektsrapportene dine. Vi er et ungt team som bruker den nyeste teknologien, og vi har tid og energi til å gi deg oppmerksomheten de store aktørene ikke klarer.</p>
       </div>
@@ -1220,120 +1267,14 @@ footer {
         <div class="team-photo">
           <img src="bilde1.png" alt="Portrett av gründer, ansvarlig for operasjoner" loading="lazy">
         </div>
-        <div class="team-name">Markus Aleksander Langgård</div>
+        <div class="team-name">[Kompis sitt navn]</div>
         <div class="team-role">Ansvarlig for operasjoner</div>
-        <p class="team-bio">Sørger for at alt det praktiske fungerer: gjestekommunikasjon, renhold, innsjekk og vedlikehold. Tilgjengelig døgnet rundt når det er høysesong.</p>
+        <p class="team-bio">Også oppvokst i Tromsø. Sørger for at alt det praktiske fungerer fra dag til dag: gjestekommunikasjon, koordinering av renhold, innsjekk og vedlikehold. Tilgjengelig døgnet rundt når det er høysesong, og alltid den gjestene kontakter hvis de trenger noe.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="test-section" aria-label="Eierhistorier">
-  <div class="container">
-    <div class="section-label">Eierhistorier</div>
-    <h2>Fra boligeiere<br>i Tromsø</h2>
-    <!-- TODO: Erstatt med ekte attester fra de første kundene -->
-    <p class="section-sub">Hør fra boligeiere som allerede samarbeider med oss.</p>
-    <div class="test-grid">
-      <div class="test-card fade-up">
-        <div class="stars" aria-label="5 av 5 stjerner">★★★★★</div>
-        <blockquote>«Jeg var litt skeptisk i starten til å gi fra meg nøklene til noen andre. Men etter tre måneder er jeg veldig glad for at jeg gjorde det. Rapportene er skikkelig detaljerte, så jeg ser alltid nøyaktig hva som skjer.»</blockquote>
-        <div class="test-author">
-          <div class="test-avatar" aria-hidden="true">AH</div>
-          <div>
-            <div class="test-name">Anders H.</div>
-            <div class="test-detail">2-roms leilighet · Tromsø sentrum</div>
-          </div>
-          <div class="income-tag">+22 000 kr/mnd</div>
-        </div>
-      </div>
-      <div class="test-card fade-up">
-        <div class="stars" aria-label="5 av 5 stjerner">★★★★★</div>
-        <blockquote>«Det beste er at jeg alltid har oversikt. Ikke bare en overføring til kontoen, men en skikkelig oversikt over alt. Og de svarer alltid raskt når jeg lurer på noe.»</blockquote>
-        <div class="test-author">
-          <div class="test-avatar" aria-hidden="true">KL</div>
-          <div>
-            <div class="test-name">Kjersti L.</div>
-            <div class="test-detail">3-roms bolig · Tromsøya</div>
-          </div>
-          <div class="income-tag">+31 000 kr/mnd</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ / TRYGGHET -->
-<section class="faq-section" id="faq" aria-label="Vanlige spørsmål">
-  <div class="container">
-    <div class="faq-grid">
-      <div>
-        <div class="section-label">Spørsmål og trygghet</div>
-        <h2>Vi forstår at du vil<br>vite alt først.</h2>
-        <p class="section-sub">Å gi nøklene til noen andre er en stor avgjørelse. Her er svar på det folk spør oss om oftest.</p>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-  <button class="faq-q" aria-expanded="false">
-    Hva skjer om en gjest ødelegger noe?
-    <span class="faq-arrow" aria-hidden="true">▾</span>
-  </button>
-          <div class="faq-a">
-            <p>Alle opphold er dekket av Airbnbs Host Damage Protection (opptil $3 000 000). I tillegg gjør vi tilstandskontroll etter hvert opphold med fotodokumentasjon, så eventuelle skader fanges opp med en gang og håndteres via plattformens forsikring. Du trenger ikke gjøre noe selv.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Kan jeg bruke boligen min selv i perioder?
-            <span class="faq-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            <p>Ja, selvfølgelig. Du blokkerer enkelt datoer via eierdashboardet, eller bare gir oss beskjed, så fjerner vi tilgjengeligheten med en gang. Mange av eierne våre bruker boligen selv om sommeren og leier ut i nordlyssesongen.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Hva er oppsigelsestiden?
-            <span class="faq-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            <p>Forvaltningsavtalen har 30 dagers oppsigelsestid. Allerede bekreftede bookinger gjennomføres som normalt, med mindre du og vi avtaler annet. Du sitter aldri fast i en lang kontrakt.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Må jeg betale skatt av Airbnb-inntekter?
-            <span class="faq-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            <p>For primærboliger er de første 15 000 kroner i årlig korttidsleieinntekt skattefri. Over dette beskattes 85 % av overskytende med 22 %. Vi lager en detaljert årsrapport som gjør skattemeldingen enkel, der alt er dokumentert linje for linje.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Hva med reglene i sameiet mitt?
-            <span class="faq-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            <p>I eierseksjoner kan du leie ut korttid inntil 90 dager per år (sameiet kan justere til mellom 60 og 120 dager). I borettslag er grensen 30 dager uten styregodkjenning. Vi holder styr på hvor mange dager du har brukt, og sørger for at du alltid er innenfor regelverket.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Hva koster renholdet?
-            <span class="faq-arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="faq-a">
-            <p>Renholdsgebyret belastes gjestene som et tillegg og er synlig i bookingprisen. Det dekker profesjonell rengjøring med skifte av sengetøy og håndklær etter hvert opphold. Du betaler ingenting for renhold selv.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
 <section class="price-section" id="pris" aria-label="Priser">
   <div class="container">
     <div class="price-layout">
@@ -1390,21 +1331,120 @@ footer {
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section" id="kontakt" aria-label="Ta kontakt">
-  <div class="cta-inner">
-    <div class="section-label">Kom i gang</div>
-    <h2>Klar for å tjene mer<br>på din bolig?</h2>
-    <p>Fyll ut skjemaet, så sender vi deg et konkret inntektsestimat innen 24 timer. Helt uforpliktende.</p>
-    <a href="kontakt.html" class="btn-white" style="display:inline-flex;">
-      Gå til kontaktskjema
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <p class="cta-note">Vi svarer innen 24 timer · Ingen forpliktelser · 30 dagers oppsigelsestid</p>
+<section class="faq-section" id="faq" aria-label="Vanlige spørsmål">
+  <div class="container">
+    <div class="faq-grid">
+      <div>
+        <div class="section-label">Spørsmål og trygghet</div>
+        <h2>Vi forstår at du vil<br>vite alt først.</h2>
+        <p class="section-sub">Å gi nøklene til noen andre er en stor avgjørelse. Her er svar på det folk spør oss om oftest.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hva skjer om en gjest ødelegger noe?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>Alle opphold er dekket av Airbnbs Host Damage Protection (opptil $3 000 000). I tillegg gjør vi tilstandskontroll etter hvert opphold med fotodokumentasjon, så eventuelle skader fanges opp med en gang og håndteres via plattformens forsikring. Du trenger ikke gjøre noe selv.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Kan jeg bruke boligen min selv i perioder?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>Ja, selvfølgelig. Du blokkerer enkelt datoer via eierdashboardet, eller bare gir oss beskjed, så fjerner vi tilgjengeligheten med en gang. Mange av eierne våre bruker boligen selv om sommeren og leier ut i nordlyssesongen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hva er oppsigelsestiden?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>Forvaltningsavtalen har 30 dagers oppsigelsestid. Allerede bekreftede bookinger gjennomføres som normalt, med mindre du og vi avtaler annet. Du sitter aldri fast i en lang kontrakt.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Må jeg betale skatt av Airbnb-inntekter?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>For primærboliger er de første 15 000 kroner i årlig korttidsleieinntekt skattefri. Over dette beskattes 85 % av overskytende med 22 %. Vi lager en detaljert årsrapport som gjør skattemeldingen enkel, der alt er dokumentert linje for linje.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hva med reglene i sameiet mitt?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>I eierseksjoner kan du leie ut korttid inntil 90 dager per år (sameiet kan justere til mellom 60 og 120 dager). I borettslag er grensen 30 dager uten styregodkjenning. Vi holder styr på hvor mange dager du har brukt, og sørger for at du alltid er innenfor regelverket.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Hva koster renholdet?
+            <span class="faq-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="faq-a">
+            <p>Renholdsgebyret belastes gjestene som et tillegg og er synlig i bookingprisen. Det dekker profesjonell rengjøring med skifte av sengetøy og håndklær etter hvert opphold. Du betaler ingenting for renhold selv.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="cta-section" id="kontakt" aria-label="Ta kontakt">
+  <div class="cta-inner">
+    <div id="cta-form-wrap">
+      <div class="section-label">Kom i gang</div>
+      <h2>Klar for å tjene mer<br>på din bolig?</h2>
+      <p>Legg igjen kontaktinfo, så sender vi deg et konkret inntektsestimat innen 24 timer.</p>
+      <div class="cta-form-grid">
+        <div class="cta-field">
+          <label for="cta-name" class="sr-only">Navn</label>
+          <input type="text" id="cta-name" class="cta-input" placeholder="Navn" autocomplete="name">
+        </div>
+        <div class="cta-field">
+          <label for="cta-phone" class="sr-only">Telefon</label>
+          <input type="tel" id="cta-phone" class="cta-input" placeholder="Telefon (+47)" autocomplete="tel">
+        </div>
+        <div class="cta-field">
+          <label for="cta-address" class="sr-only">Adresse i Tromsø</label>
+          <input type="text" id="cta-address" class="cta-input" placeholder="Adresse i Tromsø">
+        </div>
+        <div class="cta-field">
+          <label for="cta-rooms" class="sr-only">Antall soverom</label>
+          <select id="cta-rooms" class="cta-input cta-select">
+            <option value="" disabled selected>Antall soverom</option>
+            <option value="1">1 soverom</option>
+            <option value="2">2 soverom</option>
+            <option value="3">3 soverom</option>
+            <option value="4">4 soverom</option>
+            <option value="5">5+ soverom</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn-white" id="cta-submit-btn" style="margin-top:0.5rem;">
+        Send forespørsel
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p class="cta-note">Vi svarer innen 24 timer · Ingen forpliktelser · 30 dagers oppsigelsestid</p>
+      <p class="cta-note" style="margin-top:0.5rem;"><a href="kontakt.html" style="color:rgba(255,255,255,0.6); text-decoration:underline;">Vil du gi oss mer detaljer? Bruk det utvidede skjemaet →</a></p>
+    </div>
+    <div id="cta-success" class="cta-success">
+      <div style="font-size:2.5rem; margin-bottom:1rem;">✓</div>
+      <h3>Takk, da hører du fra oss!</h3>
+      <p style="color:rgba(255,255,255,0.75); margin-top:0.5rem;">Vi tar kontakt innen 24 timer med en gratis vurdering av boligen din.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -1418,7 +1458,7 @@ footer {
       <div class="footer-contact">
         <div class="footer-contact-title">Kontakt oss</div>
         <p>
-          <a href="mailto:hei@ArticHost.no">hei@ArticHost.no</a><br>
+          <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
           <a href="tel:+4700000000">+47 000 00 000</a>
         </p>
       </div>
@@ -1442,7 +1482,6 @@ footer {
   </div>
 </footer>
 
-<!-- Screen reader only utility -->
 <style>.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border-width:0; }</style>
 
 <script>
@@ -1579,6 +1618,28 @@ document.querySelectorAll('.faq-q').forEach(btn => {
       btn.setAttribute('aria-expanded', 'true');
     }
   });
+});
+
+// ─── DETAIL TOGGLE ───
+const detailToggle = document.getElementById('detail-toggle');
+const detailPanel = document.getElementById('detail-panel');
+detailToggle.addEventListener('click', () => {
+  const isOpen = detailPanel.classList.toggle('open');
+  detailToggle.setAttribute('aria-expanded', isOpen);
+  document.getElementById('detail-toggle-text').textContent = isOpen ? 'Skjul detaljer' : 'Vis detaljer og sesongvalg';
+});
+
+// ─── CTA INLINE FORM ───
+document.getElementById('cta-submit-btn').addEventListener('click', () => {
+  const name = document.getElementById('cta-name').value.trim();
+  const phone = document.getElementById('cta-phone').value.trim();
+  let valid = true;
+  document.querySelectorAll('.cta-input').forEach(i => i.classList.remove('cta-error'));
+  if (!name) { document.getElementById('cta-name').classList.add('cta-error'); valid = false; }
+  if (phone.length < 8) { document.getElementById('cta-phone').classList.add('cta-error'); valid = false; }
+  if (!valid) return;
+  document.getElementById('cta-form-wrap').style.display = 'none';
+  document.getElementById('cta-success').classList.add('visible');
 });
 
 // ─── SCROLL ANIMATIONS ───
