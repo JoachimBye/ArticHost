@@ -3,384 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt oss | ArticHost | Gratis boligvurdering i Tromsø</title>
+<title>Kontakt oss | NordHost | Gratis boligvurdering i Tromsø</title>
 <meta name="description" content="Få en gratis vurdering av din bolig i Tromsø. Vi analyserer potensialet og gir deg et konkret inntektsestimat innen 24 timer. Helt uforpliktende.">
-
-<meta property="og:title" content="Kontakt ArticHost | Gratis boligvurdering">
+<meta property="og:title" content="Kontakt NordHost | Gratis boligvurdering">
 <meta property="og:description" content="Fyll ut skjemaet og motta et konkret inntektsestimat for din bolig i Tromsø innen 24 timer.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nb_NO">
-
-<link rel="canonical" href="https://ArticHost.no/kontakt">
+<link rel="canonical" href="https://nordhost.no/kontakt">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--white:#FFF;--off-white:#F8F7F4;--stone:#F2EFE9;--ink:#1A1A1A;--ink-mid:#3D3D3D;--muted:#6B6B6B;--border:#E4E0D9;--accent:#2B4C6F;--accent-light:#EAF0F6;--accent-hover:#223d5a;--green:#1D7A3F;--green-light:#E8F5ED;--red:#C03E3E;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--off-white);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-:root {
-  --white: #FFFFFF;
-  --off-white: #F8F7F4;
-  --stone: #F2EFE9;
-  --ink: #1A1A1A;
-  --ink-mid: #3D3D3D;
-  --muted: #6B6B6B;
-  --border: #E4E0D9;
-  --accent: #2B4C6F;
-  --accent-light: #EAF0F6;
-  --accent-hover: #223d5a;
-  --green: #1D7A3F;
-  --green-light: #E8F5ED;
-  --red: #C03E3E;
-  --red-light: #FDEAEA;
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Inter', system-ui, sans-serif;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:1.2rem 2.5rem}
+.logo{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--ink);letter-spacing:-0.01em;text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{list-style:none;display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:0.875rem;color:var(--ink-mid);text-decoration:none;font-weight:400;transition:color 0.2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-phone{font-size:0.82rem;color:var(--accent);font-weight:500;text-decoration:none;display:flex;align-items:center;gap:0.3rem}
+.nav-phone:hover{color:var(--accent-hover)}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;background:none;border:none;min-width:44px;min-height:44px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform 0.3s,opacity 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-overlay{display:none;position:fixed;top:61px;left:0;right:0;bottom:0;background:rgba(255,255,255,0.98);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem;backdrop-filter:blur(10px)}
+.mobile-overlay.open{display:flex}
+.mobile-overlay a{font-size:1.3rem;color:var(--ink);text-decoration:none;font-weight:400;font-family:var(--serif);transition:color 0.2s}
+.mobile-overlay a:hover{color:var(--accent)}
 
-html { scroll-behavior: smooth; }
+/* HERO */
+.page-wrapper{padding-top:80px;min-height:100vh}
+.contact-hero{background:var(--accent);padding:3rem 0 2.5rem;color:white}
+.contact-hero .container{max-width:1180px;margin:0 auto;padding:0 2.5rem}
+.contact-hero .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+.contact-hero .breadcrumb a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s}
+.contact-hero .breadcrumb a:hover{color:rgba(255,255,255,0.8)}
+.contact-hero h1{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;line-height:1.18;letter-spacing:-0.02em;margin-bottom:0.5rem}
+.hero-desc{font-size:1rem;color:rgba(255,255,255,0.75);max-width:520px;line-height:1.7}
+.hero-meta{display:flex;align-items:center;gap:1.5rem;margin-top:0.8rem;flex-wrap:wrap}
+.hero-meta-item{font-size:0.78rem;color:rgba(255,255,255,0.55);display:flex;align-items:center;gap:0.4rem}
+.hero-meta-item svg{opacity:0.55}
+.hero-phone-btn{display:none;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:white;padding:0.65rem 1.2rem;border-radius:8px;font-family:var(--sans);font-size:0.85rem;font-weight:500;text-decoration:none;margin-top:1rem;transition:background 0.2s}
+.hero-phone-btn:hover{background:rgba(255,255,255,0.22)}
 
-body {
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+/* LAYOUT */
+.contact-body{max-width:1180px;margin:0 auto;padding:0 2.5rem}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:3rem;padding:2rem 0 5rem;align-items:start}
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
+/* MOBILE TRUST STRIP */
+.mobile-trust-strip{display:none}
 
-/* ─── NAV ─── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(255,255,255,0.94);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  max-width: 1180px; margin: 0 auto;
-  padding: 1.2rem 2.5rem;
-}
-.logo {
-  font-family: var(--serif);
-  font-size: 1.35rem; font-weight: 400;
-  color: var(--ink); letter-spacing: -0.01em;
-  text-decoration: none;
-}
-.logo span { color: var(--accent); }
-.nav-links { list-style: none; display: flex; gap: 2.2rem; align-items: center; }
-.nav-links a {
-  font-size: 0.875rem; color: var(--ink-mid);
-  text-decoration: none; font-weight: 400;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--ink); }
-.nav-phone {
-  font-size: 0.82rem; color: var(--accent); font-weight: 500;
-  text-decoration: none; display: flex; align-items: center; gap: 0.3rem;
-}
-.nav-phone:hover { color: var(--accent-hover); }
-.hamburger {
-  display: none; flex-direction: column; justify-content: center;
-  gap: 5px; cursor: pointer; padding: 8px; background: none; border: none;
-  min-width: 44px; min-height: 44px;
-}
-.hamburger span {
-  display: block; width: 22px; height: 2px;
-  background: var(--ink); border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mobile-overlay {
-  display: none; position: fixed; top: 61px; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.98); z-index: 99;
-  flex-direction: column; align-items: center; justify-content: center;
-  gap: 2rem; backdrop-filter: blur(10px);
-}
-.mobile-overlay.open { display: flex; }
-.mobile-overlay a {
-  font-size: 1.3rem; color: var(--ink); text-decoration: none;
-  font-weight: 400; font-family: var(--serif); transition: color 0.2s;
-}
-.mobile-overlay a:hover { color: var(--accent); }
+/* FORM CARD */
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:2.5rem;box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+.form-section-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:1.5rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+.form-row.full{grid-template-columns:1fr}
+.form-group{display:flex;flex-direction:column}
+.form-group label{font-size:0.82rem;font-weight:500;color:var(--ink-mid);margin-bottom:0.4rem;letter-spacing:0.01em}
+.form-group label .required{color:var(--accent);font-weight:500}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.8rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:var(--sans);font-size:0.88rem;color:var(--ink);background:var(--white);transition:border-color 0.2s,box-shadow 0.2s;outline:none;-webkit-appearance:none}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B6B6B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(43,76,111,0.08)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#B0ABA3}
+.form-group input.error,.form-group select.error,.form-group textarea.error{border-color:var(--red)}
+.form-group .error-msg{font-size:0.75rem;color:var(--red);margin-top:0.3rem;display:none}
+.form-group .error-msg.visible{display:block}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-hint{font-size:0.78rem;color:var(--muted);margin-top:0.3rem;line-height:1.5}
+.form-group input.valid,.form-group select.valid{border-color:var(--green)}
+.form-spacer{height:1.5rem}
 
-/* ─── PAGE LAYOUT ─── */
-.page-wrapper {
-  padding-top: 80px;
-  min-height: 100vh;
-}
+/* SUBMIT */
+.form-submit-area{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)}
+.btn-submit{display:flex;align-items:center;justify-content:center;gap:0.5rem;background:var(--accent);color:#fff;padding:1rem 2.5rem;border-radius:8px;font-family:var(--sans);font-weight:500;font-size:0.95rem;border:none;cursor:pointer;transition:background 0.2s,transform 0.2s;min-height:52px;width:100%}
+.btn-submit:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-submit:disabled{background:#A0B4C8;cursor:not-allowed;transform:none}
+.submit-note{font-size:0.78rem;color:var(--muted);line-height:1.5;text-align:center;margin-top:0.8rem}
 
-.contact-hero {
-  background: var(--accent);
-  padding: 4rem 0;
-  color: white;
-}
-.contact-hero .container {
-  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
-}
-.contact-hero .breadcrumb {
-  font-size: 0.78rem; color: rgba(255,255,255,0.5);
-  margin-bottom: 1.5rem;
-}
-.contact-hero .breadcrumb a {
-  color: rgba(255,255,255,0.5); text-decoration: none;
-  transition: color 0.2s;
-}
-.contact-hero .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
-.contact-hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  font-weight: 400; line-height: 1.18;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.8rem;
-}
-.contact-hero p {
-  font-size: 1.05rem; color: rgba(255,255,255,0.75);
-  max-width: 520px; line-height: 1.7;
-}
+/* SIDEBAR */
+.sidebar{position:sticky;top:100px}
+.sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.8rem;margin-bottom:1.2rem;box-shadow:0 2px 12px rgba(0,0,0,0.03)}
+.sidebar-card-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:1.2rem}
+.sidebar-steps{display:flex;flex-direction:column;gap:1.1rem}
+.sidebar-step{display:flex;gap:0.9rem;align-items:flex-start}
+.sidebar-step-num{width:26px;height:26px;border-radius:50%;background:var(--accent);color:white;font-size:0.7rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.sidebar-step-title{font-size:0.84rem;font-weight:500;color:var(--ink);margin-bottom:0.1rem}
+.sidebar-step-desc{font-size:0.78rem;color:var(--muted);line-height:1.55}
+.sidebar-trust{display:flex;flex-direction:column;gap:0.6rem}
+.sidebar-trust-item{display:flex;gap:0.6rem;align-items:center;font-size:0.82rem;color:var(--ink-mid)}
+.sidebar-trust-check{color:var(--accent);font-weight:600;font-size:0.85rem;flex-shrink:0}
+.sidebar-contact{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.03)}
+.sidebar-contact-label{font-size:0.72rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.7rem}
+.sidebar-contact-row{display:flex;align-items:center;gap:0.6rem;padding:0.4rem 0}
+.sidebar-contact-row a{font-size:0.85rem;color:var(--accent);text-decoration:none}
+.sidebar-contact-row a:hover{text-decoration:underline}
+.sidebar-contact-row svg{flex-shrink:0}
 
-.contact-body {
-  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 5rem;
-  padding: 4rem 0 6rem;
-  align-items: start;
-}
+/* SUCCESS */
+.success-state{display:none;text-align:center;padding:4rem 2rem}
+.success-state.visible{display:block}
+.success-icon{width:64px;height:64px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.5rem}
+.success-state h2{font-family:var(--serif);font-size:1.8rem;font-weight:400;margin-bottom:0.6rem}
+.success-state p{font-size:1rem;color:var(--ink-mid);line-height:1.7;max-width:440px;margin:0 auto}
+.success-state .back-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:2rem;font-size:0.88rem;color:var(--accent);text-decoration:none;font-weight:500}
+.success-state .back-link:hover{text-decoration:underline}
 
-/* ─── FORM ─── */
-.form-section {}
-.form-section-title {
-  font-family: var(--serif);
-  font-size: 1.15rem; font-weight: 400;
-  color: var(--ink); margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--border);
-}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2.5rem 0 2rem;background:var(--white)}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:var(--serif);font-size:1.15rem}
+.footer-logo span{color:var(--accent)}
+footer p{font-size:0.78rem;color:var(--muted)}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
-.form-row.full { grid-template-columns: 1fr; }
-.form-group { display: flex; flex-direction: column; }
-.form-group label {
-  font-size: 0.82rem; font-weight: 500; color: var(--ink-mid);
-  margin-bottom: 0.4rem; letter-spacing: 0.01em;
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* STICKY MOBILE SUBMIT */
+.sticky-submit{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--white);border-top:1px solid var(--border);padding:0.8rem 1.5rem;z-index:90;box-shadow:0 -2px 12px rgba(0,0,0,0.06)}
+.sticky-submit .btn-submit{width:100%}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-inner{padding:1.2rem 1.5rem}
+  .contact-hero .container{padding:0 1.5rem}
+  .contact-hero{padding:1.8rem 0 1.5rem}
+  .contact-hero .breadcrumb{display:none}
+  .contact-hero h1{font-size:1.6rem;margin-bottom:0.3rem}
+  .hero-desc{font-size:0.88rem}
+  .hero-phone-btn{display:inline-flex}
+  .contact-body{padding:0 1.5rem}
+  .contact-grid{grid-template-columns:1fr;gap:0;padding:0 0 4rem}
+  .form-card{padding:2rem 1.5rem;border-radius:12px;margin-top:1.5rem}
+  .form-row{grid-template-columns:1fr}
+  .mobile-trust-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+  .mts-item{padding:1rem 0.8rem;text-align:center;border-right:1px solid var(--border)}
+  .mts-item:last-child{border-right:none}
+  .mts-num{font-family:var(--serif);font-size:0.85rem;font-weight:500;color:var(--accent);margin-bottom:0.15rem}
+  .mts-label{font-size:0.68rem;color:var(--muted);line-height:1.3}
+  .sidebar{display:none}
+  .sticky-submit.visible{display:block}
+  .footer-inner{flex-direction:column;text-align:center}
 }
-.form-group label .required { color: var(--accent); font-weight: 500; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: var(--sans); font-size: 0.88rem;
-  color: var(--ink); background: white;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  outline: none;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(43,76,111,0.08);
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: #B0ABA3; }
-.form-group input.error,
-.form-group select.error,
-.form-group textarea.error { border-color: var(--red); }
-.form-group .error-msg {
-  font-size: 0.75rem; color: var(--red); margin-top: 0.3rem;
-  display: none;
-}
-.form-group .error-msg.visible { display: block; }
-.form-group textarea { resize: vertical; min-height: 90px; }
-.form-group select { appearance: auto; cursor: pointer; }
-.form-hint {
-  font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.5;
+@media(max-width:420px){
+  .mobile-trust-strip{grid-template-columns:1fr}
+  .mts-item{border-right:none;border-bottom:1px solid var(--border);padding:0.8rem}
+  .mts-item:last-child{border-bottom:none}
+  .form-submit-area .btn-submit{font-size:0.9rem}
 }
 
-.form-spacer { height: 2rem; }
-
-.form-submit-area {
-  display: flex; align-items: center; gap: 1.5rem;
-  margin-top: 2rem; padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  flex-wrap: wrap;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent); color: #fff;
-  padding: 0.95rem 2.2rem; border-radius: 8px;
-  font-family: var(--sans); font-weight: 500; font-size: 0.95rem;
-  text-decoration: none; border: none; cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  min-height: 48px;
-}
-.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
-.btn-primary:disabled {
-  background: #A0B4C8; cursor: not-allowed; transform: none;
-}
-.submit-note {
-  font-size: 0.78rem; color: var(--muted); line-height: 1.5;
-}
-
-/* ─── SIDEBAR ─── */
-.sidebar { position: sticky; top: 100px; }
-
-.sidebar-card {
-  background: var(--off-white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-}
-.sidebar-card-title {
-  font-family: var(--serif);
-  font-size: 1.05rem; font-weight: 400;
-  color: var(--ink); margin-bottom: 1.2rem;
-}
-.sidebar-steps { display: flex; flex-direction: column; gap: 1.2rem; }
-.sidebar-step {
-  display: flex; gap: 1rem; align-items: flex-start;
-}
-.sidebar-step-num {
-  width: 28px; height: 28px; border-radius: 50%;
-  background: var(--accent); color: white;
-  font-size: 0.72rem; font-weight: 600;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; margin-top: 1px;
-}
-.sidebar-step-title { font-size: 0.85rem; font-weight: 500; color: var(--ink); margin-bottom: 0.15rem; }
-.sidebar-step-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-
-.sidebar-trust { display: flex; flex-direction: column; gap: 0.7rem; }
-.sidebar-trust-item {
-  display: flex; gap: 0.7rem; align-items: center;
-  font-size: 0.84rem; color: var(--ink-mid);
-}
-.sidebar-trust-icon { font-size: 1rem; flex-shrink: 0; }
-
-.sidebar-contact {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-}
-.sidebar-contact-label {
-  font-size: 0.72rem; font-weight: 500; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 0.08em;
-  margin-bottom: 0.8rem;
-}
-.sidebar-contact-row {
-  display: flex; align-items: center; gap: 0.6rem;
-  padding: 0.5rem 0;
-}
-.sidebar-contact-row a {
-  font-size: 0.88rem; color: var(--accent);
-  text-decoration: none; font-weight: 400;
-}
-.sidebar-contact-row a:hover { text-decoration: underline; }
-.sidebar-contact-row .contact-icon { font-size: 0.95rem; flex-shrink: 0; }
-
-/* ─── SUCCESS STATE ─── */
-.success-state {
-  display: none;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.success-state.visible { display: block; }
-.success-icon {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: var(--green-light); color: var(--green);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; margin: 0 auto 1.5rem;
-}
-.success-state h2 {
-  font-family: var(--serif);
-  font-size: 1.8rem; font-weight: 400;
-  margin-bottom: 0.6rem;
-}
-.success-state p {
-  font-size: 1rem; color: var(--ink-mid); line-height: 1.7;
-  max-width: 440px; margin: 0 auto;
-}
-.success-state .back-link {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  margin-top: 2rem; font-size: 0.88rem; color: var(--accent);
-  text-decoration: none; font-weight: 500;
-}
-.success-state .back-link:hover { text-decoration: underline; }
-
-/* ─── FOOTER ─── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2.5rem 0 2rem;
-}
-.footer-inner {
-  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-logo { font-family: var(--serif); font-size: 1.15rem; }
-.footer-logo span { color: var(--accent); }
-footer p { font-size: 0.78rem; color: var(--muted); }
-footer a { color: var(--accent); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* ─── ANIMATIONS ─── */
-.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.fade-up.visible { opacity: 1; transform: translateY(0); }
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 960px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .nav-inner { padding: 1.2rem 1.5rem; }
-  .contact-hero .container { padding: 0 1.5rem; }
-  .contact-body { padding: 0 1.5rem; }
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 2.5rem 0 4rem;
-  }
-  .sidebar { position: static; }
-  .form-row { grid-template-columns: 1fr; }
-  .contact-hero { padding: 2.5rem 0; }
-  .footer-inner { flex-direction: column; text-align: center; }
-}
-
-@media (max-width: 420px) {
-  .form-submit-area { flex-direction: column; align-items: stretch; text-align: center; }
-}
-
-.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border-width:0; }
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav aria-label="Hovednavigasjon">
   <div class="nav-inner">
-    <a href="index.html" class="logo" aria-label="ArticHost, til forsiden">Nord<span>Host</span></a>
+    <a href="index.html" class="logo" aria-label="NordHost, til forsiden">Nord<span>Host</span></a>
     <ul class="nav-links">
       <li><a href="index.html#kalkulator">Inntekt</a></li>
       <li><a href="index.html#slik-virker-det">Prosess</a></li>
       <li><a href="index.html#pris">Priser</a></li>
       <li><a href="index.html#faq">FAQ</a></li>
-      <li><a href="tel:+4700000000" class="nav-phone" aria-label="Ring oss">📞 +47 000 00 000</a></li>
+      <li><a href="tel:+4700000000" class="nav-phone" aria-label="Ring oss"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-1px" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +47 000 00 000</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -393,308 +192,154 @@ footer a:hover { text-decoration: underline; }
 </div>
 
 <div class="page-wrapper">
-
-  <!-- HERO -->
   <div class="contact-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">ArticHost</a> &nbsp;/&nbsp; Kontakt</div>
+      <div class="breadcrumb"><a href="index.html">NordHost</a> &nbsp;/&nbsp; Kontakt</div>
       <h1>Gratis vurdering av din bolig</h1>
-      <p>Fyll inn litt informasjon om deg og boligen din, så tar vi kontakt innen 24 timer med et konkret inntektsestimat. Helt uforpliktende.</p>
+      <p class="hero-desc">Fyll inn litt informasjon om deg og boligen din, så tar vi kontakt innen 24 timer med et konkret inntektsestimat. Helt uforpliktende.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Tar ca. 2 minutter</div>
+        <div class="hero-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Svar innen 24 timer</div>
+        <div class="hero-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Ingen forpliktelser</div>
+      </div>
+      <a href="tel:+4700000000" class="hero-phone-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Foretrekker å ringe? +47 000 00 000</a>
     </div>
   </div>
 
-  <!-- FORM + SIDEBAR -->
   <div class="contact-body">
+    <div class="mobile-trust-strip">
+      <div class="mts-item"><div class="mts-num">1</div><div class="mts-label">Vi ser på boligen din</div></div>
+      <div class="mts-item"><div class="mts-num">2</div><div class="mts-label">Du får et tilbud innen 24t</div></div>
+      <div class="mts-item"><div class="mts-num">3</div><div class="mts-label">Uforpliktende møte</div></div>
+    </div>
 
-    <!-- FORM STATE -->
     <div id="form-state" class="contact-grid">
-      <div class="form-section fade-up">
-
-        <!-- Om deg -->
+      <div class="form-card fade-up">
         <div class="form-section-title">Om deg</div>
         <div class="form-row">
-          <div class="form-group">
-            <label for="fornavn">Fornavn <span class="required">*</span></label>
-            <input type="text" id="fornavn" name="fornavn" autocomplete="given-name" required>
-            <div class="error-msg" id="fornavn-error">Vennligst fyll inn fornavn</div>
-          </div>
-          <div class="form-group">
-            <label for="etternavn">Etternavn <span class="required">*</span></label>
-            <input type="text" id="etternavn" name="etternavn" autocomplete="family-name" required>
-            <div class="error-msg" id="etternavn-error">Vennligst fyll inn etternavn</div>
-          </div>
+          <div class="form-group"><label for="fornavn">Fornavn <span class="required">*</span></label><input type="text" id="fornavn" name="fornavn" autocomplete="given-name" required><div class="error-msg" id="fornavn-error">Vennligst fyll inn fornavn</div></div>
+          <div class="form-group"><label for="etternavn">Etternavn <span class="required">*</span></label><input type="text" id="etternavn" name="etternavn" autocomplete="family-name" required><div class="error-msg" id="etternavn-error">Vennligst fyll inn etternavn</div></div>
         </div>
         <div class="form-row">
-          <div class="form-group">
-            <label for="epost">E-post <span class="required">*</span></label>
-            <input type="email" id="epost" name="epost" placeholder="din@epost.no" autocomplete="email" required>
-            <div class="error-msg" id="epost-error">Vennligst fyll inn en gyldig e-postadresse</div>
-          </div>
-          <div class="form-group">
-            <label for="telefon">Telefon <span class="required">*</span></label>
-            <input type="tel" id="telefon" name="telefon" placeholder="+47" autocomplete="tel" required>
-            <div class="error-msg" id="telefon-error">Vennligst fyll inn telefonnummer</div>
-          </div>
+          <div class="form-group"><label for="epost">E-post <span class="required">*</span></label><input type="email" id="epost" name="epost" placeholder="din@epost.no" autocomplete="email" required><div class="error-msg" id="epost-error">Vennligst fyll inn en gyldig e-postadresse</div></div>
+          <div class="form-group"><label for="telefon">Telefon <span class="required">*</span></label><input type="tel" id="telefon" name="telefon" placeholder="+47" autocomplete="tel" required><div class="error-msg" id="telefon-error">Vennligst fyll inn telefonnummer</div></div>
         </div>
-
         <div class="form-spacer"></div>
-
-        <!-- Om boligen -->
         <div class="form-section-title">Om boligen</div>
-        <div class="form-row full">
-          <div class="form-group">
-            <label for="adresse">Adresse i Tromsø <span class="required">*</span></label>
-            <input type="text" id="adresse" name="adresse" placeholder="F.eks. Storgata 12, 9008 Tromsø">
-            <div class="error-msg" id="adresse-error">Vennligst fyll inn adresse</div>
-          </div>
+        <div class="form-row full"><div class="form-group"><label for="adresse">Adresse i Tromsø <span class="required">*</span></label><input type="text" id="adresse" name="adresse" placeholder="F.eks. Storgata 12, 9008 Tromsø"><div class="error-msg" id="adresse-error">Vennligst fyll inn adresse</div></div></div>
+        <div class="form-row">
+          <div class="form-group"><label for="boligtype">Boligtype <span class="required">*</span></label><select id="boligtype" name="boligtype" required><option value="" disabled selected>Velg boligtype</option><option value="leilighet">Leilighet</option><option value="enebolig">Hus / enebolig</option><option value="rekkehus">Rekkehus / tomannsbolig</option><option value="hytte">Hytte / fritidsbolig</option><option value="rom">Enkeltrom i bolig</option></select><div class="error-msg" id="boligtype-error">Vennligst velg boligtype</div></div>
+          <div class="form-group"><label for="soverom">Antall soverom og sengeplasser <span class="required">*</span></label><input type="text" id="soverom" name="soverom" placeholder="F.eks. 2 soverom, 4 sengeplasser"><div class="error-msg" id="soverom-error">Vennligst fyll inn antall soverom</div></div>
         </div>
         <div class="form-row">
-          <div class="form-group">
-            <label for="boligtype">Boligtype <span class="required">*</span></label>
-            <select id="boligtype" name="boligtype" required>
-              <option value="" disabled selected>Velg boligtype</option>
-              <option value="leilighet">Leilighet</option>
-              <option value="enebolig">Hus / enebolig</option>
-              <option value="rekkehus">Rekkehus / tomannsbolig</option>
-              <option value="hytte">Hytte / fritidsbolig</option>
-              <option value="rom">Enkeltrom i bolig</option>
-            </select>
-            <div class="error-msg" id="boligtype-error">Vennligst velg boligtype</div>
-          </div>
-          <div class="form-group">
-            <label for="soverom">Antall soverom og sengeplasser <span class="required">*</span></label>
-            <input type="text" id="soverom" name="soverom" placeholder="F.eks. 2 soverom, 4 sengeplasser">
-            <div class="error-msg" id="soverom-error">Vennligst fyll inn antall soverom</div>
-          </div>
+          <div class="form-group"><label for="eierform">Eierform</label><select id="eierform" name="eierform"><option value="" disabled selected>Velg eierform</option><option value="selveier">Selveier / eierseksjon</option><option value="borettslag">Borettslag</option><option value="annet">Annet</option></select><div class="form-hint">Borettslag har strengere regler for korttidsleie (maks 30 dager/år).</div></div>
+          <div class="form-group"><label for="periode">Ønsket utleieperiode</label><input type="text" id="periode" name="periode" placeholder="F.eks. november til mars, eller helårs"></div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="eierform">Eierform</label>
-            <select id="eierform" name="eierform">
-              <option value="" disabled selected>Velg eierform</option>
-              <option value="selveier">Selveier / eierseksjon</option>
-              <option value="borettslag">Borettslag</option>
-              <option value="annet">Annet</option>
-            </select>
-            <div class="form-hint">Borettslag har strengere regler for korttidsleie (maks 30 dager/år).</div>
-          </div>
-          <div class="form-group">
-            <label for="periode">Ønsket utleieperiode</label>
-            <input type="text" id="periode" name="periode" placeholder="F.eks. november til mars, eller helårs">
-          </div>
-        </div>
-        <div class="form-row full">
-          <div class="form-group">
-            <label for="finnlink">Finn-annonse eller lenke til bilder</label>
-            <input type="url" id="finnlink" name="finnlink" placeholder="https://">
-            <div class="form-hint">Har du en Finn-annonse, Airbnb-link eller bildealbum? Legg ved lenken, så kan vi gi et mer presist estimat. Hvis ikke sender du oss bilder på e-post etterpå.</div>
-          </div>
-        </div>
-
+        <div class="form-row full"><div class="form-group"><label for="finnlink">Finn-annonse eller lenke til bilder</label><input type="url" id="finnlink" name="finnlink" placeholder="https://"><div class="form-hint">Har du en Finn-annonse, Airbnb-link eller bildealbum? Legg ved lenken, så kan vi gi et mer presist estimat. Hvis ikke sender du oss bilder på e-post etterpå.</div></div></div>
         <div class="form-spacer"></div>
-
-        <!-- Eventuelt -->
         <div class="form-section-title">Eventuelt</div>
-        <div class="form-row full">
-          <div class="form-group">
-            <label for="annet">Er det noe annet vi bør vite?</label>
-            <textarea id="annet" name="annet" placeholder="F.eks. fasiliteter (badstue, parkering, utsikt), tidligere utleieerfaring, spesielle ønsker..."></textarea>
-          </div>
-        </div>
-
-        <!-- Submit -->
+        <div class="form-row full"><div class="form-group"><label for="annet">Er det noe annet vi bør vite?</label><textarea id="annet" name="annet" placeholder="F.eks. fasiliteter (badstue, parkering, utsikt), tidligere utleieerfaring, spesielle ønsker..."></textarea></div></div>
         <div class="form-submit-area">
-          <button class="btn-primary" id="submit-btn" type="button">
-            Send forespørsel
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-          <div class="submit-note">
-            Vi svarer innen 24 timer.<br>Ingen forpliktelser, du binder deg ikke til noe.
-          </div>
+          <button class="btn-submit" id="submit-btn" type="button">Send forespørsel <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          <div class="submit-note">Vi svarer innen 24 timer. Ingen forpliktelser, du binder deg ikke til noe.</div>
         </div>
-
       </div>
 
-      <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="sidebar-card fade-up">
           <div class="sidebar-card-title">Hva skjer etter du sender?</div>
           <div class="sidebar-steps">
-            <div class="sidebar-step">
-              <div class="sidebar-step-num">1</div>
-              <div>
-                <div class="sidebar-step-title">Vi ser på boligen din</div>
-                <div class="sidebar-step-desc">Vi sjekker beliggenhet, størrelse og markedsdata for å beregne et realistisk inntektsestimat.</div>
-              </div>
-            </div>
-            <div class="sidebar-step">
-              <div class="sidebar-step-num">2</div>
-              <div>
-                <div class="sidebar-step-title">Du mottar et konkret tilbud</div>
-                <div class="sidebar-step-desc">Innen 24 timer får du et estimat med forventet inntekt per måned og sesong.</div>
-              </div>
-            </div>
-            <div class="sidebar-step">
-              <div class="sidebar-step-num">3</div>
-              <div>
-                <div class="sidebar-step-title">Vi møtes, fysisk eller digitalt</div>
-                <div class="sidebar-step-desc">Er du interessert, tar vi et uforpliktende møte for å gå gjennom detaljene sammen.</div>
-              </div>
-            </div>
+            <div class="sidebar-step"><div class="sidebar-step-num">1</div><div><div class="sidebar-step-title">Vi ser på boligen din</div><div class="sidebar-step-desc">Vi sjekker beliggenhet, størrelse og markedsdata for å beregne et realistisk inntektsestimat.</div></div></div>
+            <div class="sidebar-step"><div class="sidebar-step-num">2</div><div><div class="sidebar-step-title">Du mottar et konkret tilbud</div><div class="sidebar-step-desc">Innen 24 timer får du et estimat med forventet inntekt per måned og sesong.</div></div></div>
+            <div class="sidebar-step"><div class="sidebar-step-num">3</div><div><div class="sidebar-step-title">Vi møtes, fysisk eller digitalt</div><div class="sidebar-step-desc">Er du interessert, tar vi et uforpliktende møte for å gå gjennom detaljene sammen.</div></div></div>
           </div>
         </div>
-
         <div class="sidebar-card fade-up">
-          <div class="sidebar-card-title">Derfor velger eiere ArticHost</div>
+          <div class="sidebar-card-title">Derfor velger eiere NordHost</div>
           <div class="sidebar-trust">
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              Ingen oppstartsgebyr
-            </div>
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              30 dagers oppsigelsestid
-            </div>
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              Fra 15 % provisjon, alt inkludert
-            </div>
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              Sanntidsinnsyn via eierdashboard
-            </div>
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              Advokattegnet forvaltningsavtale
-            </div>
-            <div class="sidebar-trust-item">
-              <span class="sidebar-trust-icon" aria-hidden="true">✓</span>
-              Navngitt forvalter, ikke et call-senter
-            </div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> Ingen oppstartsgebyr</div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> 30 dagers oppsigelsestid</div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> Fra 15 % provisjon, alt inkludert</div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> Sanntidsinnsyn via eierdashboard</div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> Advokattegnet forvaltningsavtale</div>
+            <div class="sidebar-trust-item"><span class="sidebar-trust-check" aria-hidden="true">✓</span> Navngitt forvalter, ikke et call-senter</div>
           </div>
         </div>
-
         <div class="sidebar-contact fade-up">
           <div class="sidebar-contact-label">Foretrekker du å snakke med oss?</div>
-          <div class="sidebar-contact-row">
-            <span class="contact-icon" aria-hidden="true">📞</span>
-            <a href="tel:+4700000000">+47 000 00 000</a>
-          </div>
-          <div class="sidebar-contact-row">
-            <span class="contact-icon" aria-hidden="true">✉️</span>
-            <a href="mailto:hei@ArticHost.no">hei@ArticHost.no</a>
-          </div>
+          <div class="sidebar-contact-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+4700000000">+47 000 00 000</a></div>
+          <div class="sidebar-contact-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:hei@nordhost.no">hei@nordhost.no</a></div>
         </div>
       </aside>
     </div>
 
-    <!-- SUCCESS STATE -->
     <div id="success-state" class="success-state">
       <div class="success-icon" aria-hidden="true">✓</div>
       <h2>Takk, da hører du fra oss!</h2>
       <p>Vi tar kontakt innen 24 timer med en gratis vurdering av boligen din. Sjekk gjerne innboksen din for en bekreftelse.</p>
-      <a href="index.html" class="back-link">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Tilbake til forsiden
-      </a>
+      <a href="index.html" class="back-link"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Tilbake til forsiden</a>
     </div>
-
   </div>
 </div>
 
-<!-- FOOTER -->
+<div class="sticky-submit" id="sticky-submit">
+  <button class="btn-submit" id="sticky-submit-btn" type="button">Send forespørsel <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Nord<span>Host</span></div>
-    <p>© 2026 ArticHost AS · Tromsø · <a href="mailto:hei@ArticHost.no">hei@ArticHost.no</a></p>
+    <p>© 2026 NordHost AS · Tromsø · <a href="mailto:hei@nordhost.no">hei@nordhost.no</a></p>
   </div>
 </footer>
 
 <script>
-// ─── HAMBURGER ───
-const hamburger = document.getElementById('hamburger');
-const mobileOverlay = document.getElementById('mobile-overlay');
-hamburger.addEventListener('click', () => {
-  const open = mobileOverlay.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  hamburger.setAttribute('aria-expanded', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
+const hamburger=document.getElementById('hamburger'),mobileOverlay=document.getElementById('mobile-overlay');
+hamburger.addEventListener('click',()=>{const o=mobileOverlay.classList.toggle('open');hamburger.classList.toggle('open',o);hamburger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
 
-// ─── FORM VALIDATION & SUBMIT ───
-const required = [
-  { id: 'fornavn', type: 'text' },
-  { id: 'etternavn', type: 'text' },
-  { id: 'epost', type: 'email' },
-  { id: 'telefon', type: 'tel' },
-  { id: 'adresse', type: 'text' },
-  { id: 'boligtype', type: 'select' },
-  { id: 'soverom', type: 'text' },
-];
+const required=[{id:'fornavn',type:'text'},{id:'etternavn',type:'text'},{id:'epost',type:'email'},{id:'telefon',type:'tel'},{id:'adresse',type:'text'},{id:'boligtype',type:'select'},{id:'soverom',type:'text'}];
 
-function validateField(field) {
-  const el = document.getElementById(field.id);
-  const errorEl = document.getElementById(field.id + '-error');
-  let valid = true;
-
-  if (field.type === 'select') {
-    valid = el.value !== '';
-  } else if (field.type === 'email') {
-    valid = el.value.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
-  } else if (field.type === 'tel') {
-    valid = el.value.trim().length >= 8;
-  } else {
-    valid = el.value.trim() !== '';
-  }
-
-  if (valid) {
-    el.classList.remove('error');
-    if (errorEl) errorEl.classList.remove('visible');
-  } else {
-    el.classList.add('error');
-    if (errorEl) errorEl.classList.add('visible');
-  }
-  return valid;
+function validateField(f){
+  const el=document.getElementById(f.id),err=document.getElementById(f.id+'-error');
+  let v=true;
+  if(f.type==='select')v=el.value!=='';
+  else if(f.type==='email')v=el.value.trim()!==''&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+  else if(f.type==='tel')v=el.value.trim().length>=8;
+  else v=el.value.trim()!=='';
+  el.classList.remove('error','valid');
+  if(err)err.classList.remove('visible');
+  if(v&&el.value.trim()!=='')el.classList.add('valid');
+  else if(!v){el.classList.add('error');if(err)err.classList.add('visible')}
+  return v;
 }
 
-// Live validation on blur
-required.forEach(field => {
-  const el = document.getElementById(field.id);
-  el.addEventListener('blur', () => validateField(field));
-  el.addEventListener('input', () => {
-    if (el.classList.contains('error')) validateField(field);
-  });
+required.forEach(f=>{
+  const el=document.getElementById(f.id);
+  el.addEventListener('blur',()=>validateField(f));
+  el.addEventListener('input',()=>{if(el.classList.contains('error')||el.classList.contains('valid'))validateField(f)});
 });
 
-document.getElementById('submit-btn').addEventListener('click', () => {
-  let allValid = true;
-  required.forEach(field => {
-    if (!validateField(field)) allValid = false;
-  });
-
-  if (!allValid) {
-    // Scroll to first error
-    const firstError = document.querySelector('.error');
-    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-
-  // Show success state
-  document.getElementById('form-state').style.display = 'none';
+function handleSubmit(){
+  let ok=true;required.forEach(f=>{if(!validateField(f))ok=false});
+  if(!ok){const e=document.querySelector('.error');if(e)e.scrollIntoView({behavior:'smooth',block:'center'});return}
+  document.getElementById('form-state').style.display='none';
   document.getElementById('success-state').classList.add('visible');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  document.getElementById('sticky-submit').classList.remove('visible');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 
-// ─── SCROLL ANIMATIONS ───
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+document.getElementById('submit-btn').addEventListener('click',handleSubmit);
+document.getElementById('sticky-submit-btn').addEventListener('click',handleSubmit);
+
+// Sticky submit on mobile
+if(window.innerWidth<=960){
+  const mainBtn=document.getElementById('submit-btn'),sticky=document.getElementById('sticky-submit');
+  if(mainBtn){new IntersectionObserver(e=>{e.forEach(en=>{if(!en.isIntersecting)sticky.classList.add('visible');else sticky.classList.remove('visible')})},{threshold:0}).observe(mainBtn)}
+}
+
+// Scroll animations
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target)}})},{threshold:0.15});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
