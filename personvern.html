@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personvernerklæring | ArticHost</title>
+<meta name="description" content="Personvernerklæring for ArticHost AS. Les om hvordan vi behandler personopplysninger i forbindelse med Airbnb-forvaltning i Tromsø.">
+<meta property="og:title" content="Personvernerklæring | ArticHost">
+<meta property="og:description" content="Personvernerklæring for ArticHost AS — Airbnb-forvaltning i Tromsø.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://artichost.no/personvern">
+<link rel="canonical" href="https://artichost.no/personvern">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #F8F7F4;
+  --stone: #F2EFE9;
+  --ink: #1A1A1A;
+  --ink-mid: #3D3D3D;
+  --muted: #6B6B6B;
+  --border: #E4E0D9;
+  --accent: #2B4C6F;
+  --accent-light: #EAF0F6;
+  --accent-hover: #223d5a;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1180px; margin: 0 auto;
+  padding: 1.2rem 2.5rem;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 400;
+  color: var(--ink); letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.logo span { color: var(--accent); }
+.nav-links { list-style: none; display: flex; gap: 2.2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem; color: var(--ink-mid);
+  text-decoration: none; font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.55rem 1.3rem; border-radius: 6px;
+  font-weight: 500; font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.nav-links .nav-cta { color: #fff; }
+.nav-links .nav-cta:hover { background: var(--accent-hover); color: #fff; }
+.hamburger {
+  display: none; flex-direction: column; justify-content: center;
+  gap: 5px; cursor: pointer; padding: 8px; background: none; border: none;
+  min-width: 44px; min-height: 44px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-overlay {
+  display: none; position: fixed; top: 61px; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.98); z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 2rem; backdrop-filter: blur(10px);
+}
+.mobile-overlay.open { display: flex; }
+.mobile-overlay a {
+  font-size: 1.3rem; color: var(--ink); text-decoration: none;
+  font-weight: 400; font-family: var(--serif);
+}
+.mobile-overlay a:hover { color: var(--accent); }
+.mobile-overlay .mob-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 6px;
+  font-family: var(--sans); font-weight: 500; font-size: 1rem;
+}
+
+/* ─── PAGE HEADER ─── */
+.page-header {
+  padding-top: 80px;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+}
+.page-header-inner {
+  max-width: 1180px; margin: 0 auto; padding: 5rem 2.5rem 3.5rem;
+}
+.page-header .breadcrumb {
+  font-size: 0.78rem; color: var(--muted); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.page-header .breadcrumb a {
+  color: var(--accent); text-decoration: none;
+}
+.page-header .breadcrumb a:hover { text-decoration: underline; }
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 400; line-height: 1.18;
+  letter-spacing: -0.02em; color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+.page-header .updated {
+  font-size: 0.82rem; color: var(--muted);
+}
+
+/* ─── CONTENT ─── */
+.legal-content {
+  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 240px 1fr; gap: 4rem;
+  padding-top: 3.5rem; padding-bottom: 5rem;
+}
+
+/* Table of contents sidebar */
+.toc {
+  position: sticky; top: 100px; align-self: start;
+}
+.toc-title {
+  font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.toc-list {
+  list-style: none; display: flex; flex-direction: column; gap: 0;
+}
+.toc-list a {
+  display: block; font-size: 0.82rem; color: var(--ink-mid);
+  text-decoration: none; padding: 0.45rem 0 0.45rem 1rem;
+  border-left: 1.5px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1.4;
+}
+.toc-list a:hover,
+.toc-list a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Article body */
+.legal-body {}
+.legal-body h2 {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 400;
+  color: var(--ink); margin-top: 3rem; margin-bottom: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.legal-body h2:first-child {
+  margin-top: 0; padding-top: 0; border-top: none;
+}
+.legal-body h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem; font-weight: 500;
+  color: var(--ink); margin-top: 1.8rem; margin-bottom: 0.5rem;
+}
+.legal-body p {
+  font-size: 0.9rem; color: var(--ink-mid);
+  line-height: 1.8; margin-bottom: 1rem;
+}
+.legal-body ul, .legal-body ol {
+  margin-bottom: 1rem; padding-left: 1.2rem;
+}
+.legal-body li {
+  font-size: 0.9rem; color: var(--ink-mid);
+  line-height: 1.8; margin-bottom: 0.3rem;
+}
+.legal-body a {
+  color: var(--accent); text-decoration: none;
+}
+.legal-body a:hover { text-decoration: underline; }
+.legal-body .info-box {
+  background: var(--accent-light);
+  border: 1px solid #D0DEE9;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.legal-body .info-box p {
+  color: var(--ink); font-size: 0.85rem; margin-bottom: 0;
+}
+.legal-body .info-box strong {
+  color: var(--accent);
+}
+.legal-body table {
+  width: 100%; border-collapse: collapse;
+  margin: 1.2rem 0 1.5rem; font-size: 0.85rem;
+}
+.legal-body th {
+  text-align: left; font-weight: 500; color: var(--ink);
+  padding: 0.75rem 1rem; background: var(--off-white);
+  border: 1px solid var(--border);
+}
+.legal-body td {
+  padding: 0.75rem 1rem; color: var(--ink-mid);
+  border: 1px solid var(--border); line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 2rem;
+}
+.footer-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
+}
+.footer-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 2rem; padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; gap: 2rem;
+}
+.footer-logo { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.footer-logo span { color: var(--accent); }
+.footer-org { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+.footer-contact-title { font-size: 0.72rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.footer-contact p { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.8; }
+.footer-contact a { color: var(--accent); text-decoration: none; }
+.footer-contact a:hover { text-decoration: underline; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-inner { padding: 1.2rem 1.5rem; }
+  .page-header-inner { padding: 4rem 1.5rem 2.5rem; }
+  .legal-content {
+    grid-template-columns: 1fr;
+    gap: 0; padding: 0 1.5rem;
+    padding-top: 2.5rem; padding-bottom: 3.5rem;
+  }
+  .toc {
+    position: relative; top: auto;
+    padding-bottom: 2rem; margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top { flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Hovednavigasjon">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="ArticHost, til forsiden">Artic<span>Host</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#kalkulator">Inntekt</a></li>
+      <li><a href="index.html#slik-virker-det">Prosess</a></li>
+      <li><a href="index.html#om-oss">Om oss</a></li>
+      <li><a href="index.html#pris">Priser</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Gratis vurdering</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-label="Mobilmeny">
+  <a href="index.html#kalkulator" class="mob-link">Inntekt</a>
+  <a href="index.html#slik-virker-det" class="mob-link">Prosess</a>
+  <a href="index.html#om-oss" class="mob-link">Om oss</a>
+  <a href="index.html#pris" class="mob-link">Priser</a>
+  <a href="kontakt.html" class="mob-cta mob-link">Gratis vurdering</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Hjem</a>
+      <span>›</span>
+      <span>Personvernerklæring</span>
+    </div>
+    <h1>Personvernerklæring</h1>
+    <p class="updated">Sist oppdatert: 7. mars 2026</p>
+  </div>
+</header>
+
+<div class="legal-content">
+  <aside class="toc" aria-label="Innholdsfortegnelse">
+    <div class="toc-title">Innhold</div>
+    <ol class="toc-list">
+      <li><a href="#behandlingsansvarlig">1. Behandlingsansvarlig</a></li>
+      <li><a href="#opplysninger">2. Opplysninger vi samler inn</a></li>
+      <li><a href="#formal">3. Formål og rettslig grunnlag</a></li>
+      <li><a href="#deling">4. Deling med tredjeparter</a></li>
+      <li><a href="#oppbevaring">5. Oppbevaring</a></li>
+      <li><a href="#rettigheter">6. Dine rettigheter</a></li>
+      <li><a href="#informasjonskapsler">7. Informasjonskapsler</a></li>
+      <li><a href="#sikkerhet">8. Sikkerhet</a></li>
+      <li><a href="#endringer">9. Endringer</a></li>
+      <li><a href="#kontakt-personvern">10. Kontakt oss</a></li>
+    </ol>
+  </aside>
+
+  <article class="legal-body">
+
+    <h2 id="behandlingsansvarlig">1. Behandlingsansvarlig</h2>
+    <p>ArticHost AS (under stiftelse) er behandlingsansvarlig for personopplysninger som samles inn via nettsiden artichost.no og gjennom vår forvaltningsvirksomhet.</p>
+    <div class="info-box">
+      <p><strong>ArticHost AS</strong><br>
+      Storgata 00, 9008 Tromsø<br>
+      Org.nr.: 000 000 000<br>
+      E-post: <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+      Telefon: <a href="tel:+4700000000">+47 000 00 000</a></p>
+    </div>
+
+    <h2 id="opplysninger">2. Opplysninger vi samler inn</h2>
+    <p>Vi samler inn ulike typer personopplysninger avhengig av hvordan du interagerer med oss:</p>
+
+    <h3>2.1 Opplysninger du gir oss direkte</h3>
+    <p>Når du fyller ut kontaktskjemaet, ber om en gratis boligvurdering eller inngår en forvaltningsavtale, kan vi samle inn:</p>
+    <ul>
+      <li>Navn og kontaktinformasjon (telefonnummer, e-postadresse)</li>
+      <li>Adresse til boligen som skal forvaltes</li>
+      <li>Informasjon om boligen (antall soverom, type, beliggenhet)</li>
+      <li>Bankkontonummer for utbetaling av leieinntekter</li>
+      <li>Organisasjonsnummer (dersom du leier ut gjennom et selskap)</li>
+    </ul>
+
+    <h3>2.2 Opplysninger vi samler inn automatisk</h3>
+    <p>Når du besøker nettsiden vår, kan vi samle inn teknisk informasjon som:</p>
+    <ul>
+      <li>IP-adresse (anonymisert)</li>
+      <li>Nettlesertype og operativsystem</li>
+      <li>Hvilke sider du besøker og hvor lenge</li>
+      <li>Henvisningsadresse (hvilken side du kom fra)</li>
+    </ul>
+
+    <h3>2.3 Opplysninger fra tredjeparter</h3>
+    <p>I forbindelse med forvaltningsoppdrag kan vi motta opplysninger fra Airbnb, Booking.com og andre utleieplattformer, som gjesteinformasjon knyttet til bookinger i din bolig. Vi behandler disse opplysningene på vegne av deg som eier og i henhold til plattformenes egne personvernregler.</p>
+
+    <h2 id="formal">3. Formål og rettslig grunnlag</h2>
+    <p>Vi behandler personopplysninger for følgende formål:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Formål</th>
+          <th>Rettslig grunnlag (GDPR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Besvare henvendelser og gi boligvurderinger</td>
+          <td>Samtykke (art. 6 nr. 1 bokstav a) og berettiget interesse (art. 6 nr. 1 bokstav f)</td>
+        </tr>
+        <tr>
+          <td>Oppfylle forvaltningsavtalen (utleie, gjestekontakt, renhold, rapportering)</td>
+          <td>Oppfyllelse av avtale (art. 6 nr. 1 bokstav b)</td>
+        </tr>
+        <tr>
+          <td>Sende månedlige inntektsrapporter og skatteunderlag</td>
+          <td>Oppfyllelse av avtale og rettslig forpliktelse (art. 6 nr. 1 bokstav b og c)</td>
+        </tr>
+        <tr>
+          <td>Utbetale leieinntekter til eier</td>
+          <td>Oppfyllelse av avtale (art. 6 nr. 1 bokstav b)</td>
+        </tr>
+        <tr>
+          <td>Bokføring og regnskapsplikt</td>
+          <td>Rettslig forpliktelse (art. 6 nr. 1 bokstav c) — bokføringsloven</td>
+        </tr>
+        <tr>
+          <td>Forbedre nettsiden og brukeropplevelsen</td>
+          <td>Berettiget interesse (art. 6 nr. 1 bokstav f)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="deling">4. Deling med tredjeparter</h2>
+    <p>Vi selger aldri personopplysningene dine. Vi kan dele opplysninger med følgende kategorier av mottakere, kun i den grad det er nødvendig:</p>
+    <ul>
+      <li><strong>Utleieplattformer</strong> (Airbnb, Booking.com, VRBO, Google Vacation Rentals) — for å opprette og administrere annonser og bookinger på dine vegne.</li>
+      <li><strong>Renholdspartnere</strong> — navn og tidspunkt for å koordinere rengjøring mellom opphold. Vi deler kun det som er strengt nødvendig.</li>
+      <li><strong>Regnskapsfører</strong> — for bokføring og skattemessige forpliktelser.</li>
+      <li><strong>IT-leverandører og vertsplattformer</strong> — for hosting av nettside og eierdashboard (databehandleravtale er inngått).</li>
+      <li><strong>Betalingsformidlere</strong> — for gjennomføring av utbetalinger.</li>
+    </ul>
+    <p>Alle tredjeparter som behandler personopplysninger på våre vegne er underlagt databehandleravtaler i henhold til GDPR art. 28.</p>
+
+    <h2 id="oppbevaring">5. Oppbevaring</h2>
+    <p>Vi oppbevarer personopplysninger så lenge det er nødvendig for formålet de ble samlet inn for:</p>
+    <ul>
+      <li><strong>Henvendelser via kontaktskjema:</strong> Slettes innen 12 måneder etter at henvendelsen er besvart, med mindre det inngås en avtale.</li>
+      <li><strong>Opplysninger knyttet til forvaltningsavtalen:</strong> Oppbevares i avtalens varighet og i inntil 5 år etter avtalens opphør (i henhold til bokføringslovens krav).</li>
+      <li><strong>Regnskapsmateriale:</strong> Oppbevares i 5 år i henhold til bokføringsloven § 13.</li>
+      <li><strong>Analyseinformasjon:</strong> Aggregeres og anonymiseres løpende.</li>
+    </ul>
+
+    <h2 id="rettigheter">6. Dine rettigheter</h2>
+    <p>I henhold til personopplysningsloven og GDPR har du følgende rettigheter:</p>
+    <ul>
+      <li><strong>Innsyn:</strong> Du kan be om en kopi av alle personopplysninger vi har lagret om deg.</li>
+      <li><strong>Retting:</strong> Du kan be om at uriktige opplysninger rettes.</li>
+      <li><strong>Sletting:</strong> Du kan be om at opplysninger slettes når det ikke lenger er et lovlig grunnlag for behandlingen.</li>
+      <li><strong>Begrensning:</strong> Du kan be om at behandlingen begrenses i visse tilfeller.</li>
+      <li><strong>Dataportabilitet:</strong> Du kan be om å motta opplysningene dine i et strukturert, alminnelig brukt og maskinlesbart format.</li>
+      <li><strong>Innsigelse:</strong> Du kan protestere mot behandling basert på berettiget interesse.</li>
+    </ul>
+    <p>For å utøve dine rettigheter, kontakt oss på <a href="mailto:hei@artichost.no">hei@artichost.no</a>. Vi besvarer henvendelser innen 30 dager.</p>
+    <p>Du har også rett til å klage til Datatilsynet dersom du mener at vi behandler personopplysningene dine i strid med regelverket. Mer informasjon finner du på <a href="https://www.datatilsynet.no" target="_blank" rel="noopener">datatilsynet.no</a>.</p>
+
+    <h2 id="informasjonskapsler">7. Informasjonskapsler (cookies)</h2>
+    <p>Nettsiden vår bruker informasjonskapsler for å sikre at siden fungerer korrekt og for å forstå hvordan besøkende bruker den.</p>
+
+    <h3>7.1 Nødvendige informasjonskapsler</h3>
+    <p>Disse er påkrevd for at nettsiden skal fungere og kan ikke slås av. De lagrer ingen personlig identifiserbar informasjon.</p>
+
+    <h3>7.2 Analysekapsler</h3>
+    <p>Vi kan bruke analyseverktøy (som et personvernvennlig alternativ til Google Analytics) for å forstå hvordan besøkende bruker nettsiden. Disse kapslene samler kun aggregert, anonymisert informasjon. Dersom vi bruker analysekapsler som krever samtykke, vil du bli bedt om dette før de aktiveres.</p>
+
+    <p>Du kan administrere og slette informasjonskapsler via nettleserinnstillingene dine. Merk at enkelte funksjoner på nettsiden kan slutte å fungere dersom du blokkerer nødvendige informasjonskapsler.</p>
+
+    <h2 id="sikkerhet">8. Sikkerhet</h2>
+    <p>Vi tar sikkerhet på alvor og har iverksatt tekniske og organisatoriske tiltak for å beskytte dine personopplysninger mot uautorisert tilgang, endring, avsløring eller sletting. Dette inkluderer blant annet:</p>
+    <ul>
+      <li>Kryptert dataoverføring (HTTPS/TLS)</li>
+      <li>Tilgangskontroll med sterke passord og tofaktorautentisering</li>
+      <li>Regelmessig gjennomgang av tilgangsrettigheter</li>
+      <li>Databehandleravtaler med alle underleverandører</li>
+    </ul>
+
+    <h2 id="endringer">9. Endringer i personvernerklæringen</h2>
+    <p>Vi kan oppdatere denne personvernerklæringen fra tid til annen. Ved vesentlige endringer vil vi informere deg via e-post (dersom du er eksisterende kunde) eller tydelig på nettsiden. Den gjeldende versjonen vil alltid være tilgjengelig på denne siden med oppdatert dato.</p>
+
+    <h2 id="kontakt-personvern">10. Kontakt oss</h2>
+    <p>Har du spørsmål om hvordan vi behandler personopplysninger, eller ønsker du å utøve dine rettigheter, kan du kontakte oss:</p>
+    <div class="info-box">
+      <p><strong>ArticHost AS</strong><br>
+      E-post: <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+      Telefon: <a href="tel:+4700000000">+47 000 00 000</a><br>
+      Adresse: Storgata 00, 9008 Tromsø</p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Artic<span>Host</span></div>
+        <div class="footer-org">
+          ArticHost AS · Org.nr. 000 000 000<br>
+          Storgata 00, 9008 Tromsø
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Kontakt oss</div>
+        <p>
+          <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+          <a href="tel:+4700000000">+47 000 00 000</a>
+        </p>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Lenker</div>
+        <p>
+          <a href="index.html#kalkulator">Inntektskalkulator</a><br>
+          <a href="index.html#slik-virker-det">Slik fungerer det</a><br>
+          <a href="index.html#faq">Vanlige spørsmål</a><br>
+          <a href="index.html#pris">Priser</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ArticHost AS · Alle rettigheter reservert</p>
+      <div class="footer-links">
+        <a href="personvern.html">Personvern</a>
+        <a href="vilkar.html">Vilkår</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobile-overlay');
+hamburger.addEventListener('click', () => {
+  const open = mobileOverlay.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileOverlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Active TOC highlight on scroll
+const tocLinks = document.querySelectorAll('.toc-list a');
+const sections = [];
+tocLinks.forEach(link => {
+  const id = link.getAttribute('href').substring(1);
+  const el = document.getElementById(id);
+  if (el) sections.push({ id, el, link });
+});
+
+function updateToc() {
+  let current = sections[0];
+  for (const s of sections) {
+    if (s.el.getBoundingClientRect().top <= 120) current = s;
+  }
+  tocLinks.forEach(l => l.classList.remove('active'));
+  if (current) current.link.classList.add('active');
+}
+window.addEventListener('scroll', updateToc, { passive: true });
+updateToc();
+</script>
+</body>
+</html>
