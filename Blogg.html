@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogg og ressurser | ArticHost — Airbnb-forvaltning i Tromsø</title>
+<meta name="description" content="Guider, tips og markedsinnsikt om korttidsutleie og Airbnb i Tromsø. Lær om skatteregler, prisstrategier og nordlyssesongen.">
+<meta property="og:title" content="Blogg og ressurser | ArticHost">
+<meta property="og:description" content="Guider, tips og markedsinnsikt om korttidsutleie og Airbnb i Tromsø.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://artichost.no/blogg">
+<link rel="canonical" href="https://artichost.no/blogg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "ArticHost Blogg",
+  "description": "Guider, tips og markedsinnsikt om korttidsutleie og Airbnb i Tromsø",
+  "url": "https://artichost.no/blogg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ArticHost AS",
+    "url": "https://artichost.no"
+  }
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #F8F7F4;
+  --stone: #F2EFE9;
+  --ink: #1A1A1A;
+  --ink-mid: #3D3D3D;
+  --muted: #6B6B6B;
+  --border: #E4E0D9;
+  --accent: #2B4C6F;
+  --accent-light: #EAF0F6;
+  --accent-hover: #223d5a;
+  --green: #1D7A3F;
+  --green-light: #E8F5ED;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+img { display: block; width: 100%; object-fit: cover; }
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1180px; margin: 0 auto;
+  padding: 1.2rem 2.5rem;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 400;
+  color: var(--ink); letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.logo span { color: var(--accent); }
+.nav-links { list-style: none; display: flex; gap: 2.2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem; color: var(--ink-mid);
+  text-decoration: none; font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.55rem 1.3rem; border-radius: 6px;
+  font-weight: 500; font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.nav-links .nav-cta { color: #fff; }
+.nav-links .nav-cta:hover { background: var(--accent-hover); color: #fff; }
+.nav-active { color: var(--accent) !important; font-weight: 500; }
+
+.hamburger {
+  display: none; flex-direction: column; justify-content: center;
+  gap: 5px; cursor: pointer; padding: 8px; background: none; border: none;
+  min-width: 44px; min-height: 44px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-overlay {
+  display: none; position: fixed; top: 61px; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.98); z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 2rem; backdrop-filter: blur(10px);
+}
+.mobile-overlay.open { display: flex; }
+.mobile-overlay a {
+  font-size: 1.3rem; color: var(--ink); text-decoration: none;
+  font-weight: 400; font-family: var(--serif);
+}
+.mobile-overlay a:hover { color: var(--accent); }
+.mobile-overlay .mob-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 6px;
+  font-family: var(--sans); font-weight: 500; font-size: 1rem;
+}
+
+/* ─── PAGE HEADER ─── */
+.page-header {
+  padding-top: 80px;
+  background: var(--accent);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::after {
+  content: '';
+  position: absolute; top: 0; right: -10%; bottom: 0;
+  width: 50%; opacity: 0.04;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    white 40px,
+    white 42px
+  );
+  pointer-events: none;
+}
+.page-header-inner {
+  max-width: 1180px; margin: 0 auto;
+  padding: 5rem 2.5rem 4rem;
+  position: relative; z-index: 1;
+}
+.page-header .breadcrumb {
+  font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.page-header .breadcrumb a {
+  color: rgba(255,255,255,0.7); text-decoration: none;
+}
+.page-header .breadcrumb a:hover { color: white; }
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400; line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.page-header .header-sub {
+  font-size: 1.05rem; color: rgba(255,255,255,0.7);
+  max-width: 520px; line-height: 1.75;
+}
+
+/* ─── FILTER BAR ─── */
+.filter-bar {
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 61px; z-index: 50;
+}
+.filter-inner {
+  max-width: 1180px; margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.filter-inner::-webkit-scrollbar { display: none; }
+.filter-btn {
+  padding: 1rem 1.2rem;
+  font-family: var(--sans); font-size: 0.82rem; font-weight: 400;
+  color: var(--muted); background: none; border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer; white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  min-height: 44px;
+}
+.filter-btn:hover { color: var(--ink); }
+.filter-btn.active {
+  color: var(--accent); font-weight: 500;
+  border-bottom-color: var(--accent);
+}
+
+/* ─── FEATURED ARTICLE ─── */
+.featured-section {
+  max-width: 1180px; margin: 0 auto;
+  padding: 3.5rem 2.5rem 0;
+}
+.featured-label {
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); font-weight: 500; margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.featured-label::before {
+  content: ''; display: inline-block;
+  width: 20px; height: 1px; background: var(--accent);
+}
+.featured-card {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; background: var(--off-white);
+  border: 1px solid var(--border); border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  text-decoration: none; color: inherit;
+}
+.featured-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.featured-img {
+  background: var(--stone);
+  min-height: 340px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.6rem; position: relative;
+}
+.featured-img .ph-icon { font-size: 2.5rem; opacity: 0.4; }
+.featured-img .ph-label {
+  font-size: 0.72rem; font-weight: 500;
+  color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.featured-body {
+  padding: 3rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.featured-tag {
+  display: inline-block; background: var(--accent-light);
+  color: var(--accent); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.2rem 0.6rem; border-radius: 4px;
+  margin-bottom: 1rem; width: fit-content;
+}
+.featured-body h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem; font-weight: 400;
+  color: var(--ink); line-height: 1.3;
+  letter-spacing: -0.01em; margin-bottom: 0.8rem;
+}
+.featured-body p {
+  font-size: 0.9rem; color: var(--ink-mid);
+  line-height: 1.75; margin-bottom: 1.5rem;
+}
+.featured-meta {
+  font-size: 0.78rem; color: var(--muted);
+  display: flex; align-items: center; gap: 1rem;
+}
+.featured-meta .dot {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--border);
+}
+.read-more-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--accent); font-size: 0.85rem; font-weight: 500;
+  text-decoration: none; margin-top: auto;
+  transition: gap 0.2s;
+}
+.read-more-link:hover { gap: 0.7rem; }
+
+/* ─── ARTICLE GRID ─── */
+.articles-section {
+  max-width: 1180px; margin: 0 auto;
+  padding: 3rem 2.5rem 5rem;
+}
+.articles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.article-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+}
+.article-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.article-card-img {
+  background: var(--stone);
+  height: 180px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0.4rem; position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.article-card-img .ph-icon { font-size: 1.8rem; opacity: 0.35; }
+.article-card-img .ph-label {
+  font-size: 0.68rem; font-weight: 500;
+  color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.article-card-body {
+  padding: 1.5rem;
+  display: flex; flex-direction: column;
+  flex: 1;
+}
+.article-tag {
+  display: inline-block;
+  font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.15rem 0.5rem; border-radius: 3px;
+  margin-bottom: 0.8rem; width: fit-content;
+}
+.tag-guide { background: var(--accent-light); color: var(--accent); }
+.tag-marked { background: #FFF3E0; color: #B8730C; }
+.tag-skatt { background: var(--green-light); color: var(--green); }
+.tag-tips { background: #F3E8FF; color: #6B3FA0; }
+.tag-regelverk { background: #FDE8E8; color: #B83232; }
+
+.article-card-body h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem; font-weight: 400;
+  color: var(--ink); line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+.article-card-body p {
+  font-size: 0.82rem; color: var(--muted);
+  line-height: 1.7; margin-bottom: 1.2rem;
+  flex: 1;
+}
+.article-meta {
+  font-size: 0.72rem; color: var(--muted);
+  display: flex; align-items: center; gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+.article-meta .dot {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--border);
+}
+
+/* ─── NEWSLETTER / CTA ─── */
+.blog-cta {
+  max-width: 1180px; margin: 0 auto;
+  padding: 0 2.5rem 5rem;
+}
+.blog-cta-card {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 3.5rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: center;
+  position: relative; overflow: hidden;
+}
+.blog-cta-card::after {
+  content: '';
+  position: absolute; top: -50%; right: -20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.blog-cta-text { position: relative; z-index: 1; }
+.blog-cta-text h2 {
+  font-family: var(--serif);
+  font-size: 1.8rem; font-weight: 400;
+  color: white; line-height: 1.25;
+  margin-bottom: 0.8rem;
+}
+.blog-cta-text p {
+  color: rgba(255,255,255,0.7); font-size: 0.92rem;
+  line-height: 1.75;
+}
+.blog-cta-form {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.blog-cta-row {
+  display: flex; gap: 0.75rem;
+}
+.blog-cta-input {
+  flex: 1; padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px; color: white;
+  font-family: var(--sans); font-size: 0.88rem;
+  outline: none; transition: border-color 0.2s;
+}
+.blog-cta-input::placeholder { color: rgba(255,255,255,0.4); }
+.blog-cta-input:focus { border-color: rgba(255,255,255,0.5); }
+.btn-white {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  background: white; color: var(--accent);
+  padding: 0.85rem 1.8rem; border-radius: 6px;
+  font-family: var(--sans); font-weight: 500; font-size: 0.88rem;
+  border: none; cursor: pointer; white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none; min-height: 48px;
+}
+.btn-white:hover { background: var(--off-white); transform: translateY(-1px); }
+.blog-cta-note {
+  font-size: 0.75rem; color: rgba(255,255,255,0.4);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 2rem;
+}
+.footer-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
+}
+.footer-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 2rem; padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; gap: 2rem;
+}
+.footer-logo { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.footer-logo span { color: var(--accent); }
+.footer-org { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+.footer-contact-title { font-size: 0.72rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.footer-contact p { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.8; }
+.footer-contact a { color: var(--accent); text-decoration: none; }
+.footer-contact a:hover { text-decoration: underline; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ─── ANIMATIONS ─── */
+.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-inner { padding: 1.2rem 1.5rem; }
+  .page-header-inner { padding: 4rem 1.5rem 3rem; }
+  .filter-inner { padding: 0 1.5rem; }
+  .featured-section { padding: 2.5rem 1.5rem 0; }
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-img { min-height: 200px; }
+  .featured-body { padding: 2rem 1.5rem; }
+  .articles-section { padding: 2.5rem 1.5rem 3.5rem; }
+  .articles-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .blog-cta { padding: 0 1.5rem 3.5rem; }
+  .blog-cta-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem; gap: 2rem;
+  }
+  .blog-cta-row { flex-direction: column; }
+  .footer-top { flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+
+@media (max-width: 640px) {
+  .articles-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { opacity: 1; transform: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Hovednavigasjon">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="ArticHost, til forsiden">Artic<span>Host</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#kalkulator">Inntekt</a></li>
+      <li><a href="index.html#slik-virker-det">Prosess</a></li>
+      <li><a href="blogg.html" class="nav-active">Ressurser</a></li>
+      <li><a href="index.html#pris">Priser</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Gratis vurdering</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-label="Mobilmeny">
+  <a href="index.html#kalkulator" class="mob-link">Inntekt</a>
+  <a href="index.html#slik-virker-det" class="mob-link">Prosess</a>
+  <a href="blogg.html" class="mob-link">Ressurser</a>
+  <a href="index.html#pris" class="mob-link">Priser</a>
+  <a href="kontakt.html" class="mob-cta mob-link">Gratis vurdering</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Hjem</a>
+      <span>›</span>
+      <span>Blogg og ressurser</span>
+    </div>
+    <h1>Ressurser for<br>boligeiere i Tromsø</h1>
+    <p class="header-sub">Guider, markedsinnsikt og praktiske tips om korttidsutleie. Alt du trenger å vite før du leier ut boligen din.</p>
+  </div>
+</header>
+
+<div class="filter-bar" aria-label="Filtrer artikler">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all">Alle</button>
+    <button class="filter-btn" data-filter="guide">Guider</button>
+    <button class="filter-btn" data-filter="marked">Markedsinnsikt</button>
+    <button class="filter-btn" data-filter="skatt">Skatt og økonomi</button>
+    <button class="filter-btn" data-filter="regelverk">Regelverk</button>
+    <button class="filter-btn" data-filter="tips">Tips og triks</button>
+  </div>
+</div>
+
+<!-- Featured article -->
+<div class="featured-section">
+  <div class="featured-label">Anbefalt lesning</div>
+  <a href="#" class="featured-card fade-up" data-category="guide">
+    <div class="featured-img">
+      <div class="ph-icon">📊</div>
+      <div class="ph-label">Illustrasjon</div>
+    </div>
+    <div class="featured-body">
+      <div class="featured-tag">Komplett guide</div>
+      <h2>Airbnb-utleie i Tromsø: den komplette guiden for 2026</h2>
+      <p>Alt du trenger å vite om korttidsutleie i Tromsø — fra regler og skatt til prisstrategier for nordlyssesongen. Vi dekker hele prosessen fra start til ferdig oppsett.</p>
+      <div class="featured-meta">
+        <span>Joachim Nordmo Bye</span>
+        <span class="dot"></span>
+        <span>Mars 2026</span>
+        <span class="dot"></span>
+        <span>12 min lesetid</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- Article grid -->
+<section class="articles-section" aria-label="Alle artikler">
+  <div class="articles-grid">
+
+    <a href="#" class="article-card fade-up" data-category="skatt">
+      <div class="article-card-img">
+        <div class="ph-icon">🧾</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-skatt">Skatt og økonomi</div>
+        <h3>Skatt på Airbnb-inntekter i Norge: hva du må vite i 2026</h3>
+        <p>Skattefritt beløp, rapporteringsplikt og fradragsmuligheter. Vi forklarer skattereglene for korttidsutleie så enkelt som mulig.</p>
+        <div class="article-meta">
+          <span>Mars 2026</span>
+          <span class="dot"></span>
+          <span>7 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="marked">
+      <div class="article-card-img">
+        <div class="ph-icon">🌌</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-marked">Markedsinnsikt</div>
+        <h3>Nordlyssesongen 2025/2026: prisutvikling og belegg i Tromsø</h3>
+        <p>Vi analyserer denne sesongens tall — gjennomsnittspriser, beleggsprosent og hva som kjennetegner de mest lønnsomme annonsene.</p>
+        <div class="article-meta">
+          <span>Februar 2026</span>
+          <span class="dot"></span>
+          <span>6 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="regelverk">
+      <div class="article-card-img">
+        <div class="ph-icon">⚖️</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-regelverk">Regelverk</div>
+        <h3>Korttidsutleie i eierseksjon og borettslag: reglene du må kjenne</h3>
+        <p>90-dagersregelen, styregodkjenning i borettslag og hva sameiet faktisk kan bestemme. En praktisk gjennomgang av lovverket.</p>
+        <div class="article-meta">
+          <span>Februar 2026</span>
+          <span class="dot"></span>
+          <span>8 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="marked">
+      <div class="article-card-img">
+        <div class="ph-icon">📈</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-marked">Markedsinnsikt</div>
+        <h3>Airbnb vs. langtidsleie i Tromsø — hva lønner seg i 2026?</h3>
+        <p>Vi sammenligner reell inntekt fra korttidsutleie med langtidsleie for ulike boligtyper i Tromsø-området.</p>
+        <div class="article-meta">
+          <span>Januar 2026</span>
+          <span class="dot"></span>
+          <span>5 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="tips">
+      <div class="article-card-img">
+        <div class="ph-icon">📸</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-tips">Tips og triks</div>
+        <h3>Slik gjør du boligen din klar for Airbnb-gjester</h3>
+        <p>Fra møblering og styling til velkomstpakker og praktiske detaljer. Sjekklisten som gjør boligen din klar for 5-stjerners vurderinger.</p>
+        <div class="article-meta">
+          <span>Januar 2026</span>
+          <span class="dot"></span>
+          <span>9 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="tips">
+      <div class="article-card-img">
+        <div class="ph-icon">💰</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-tips">Tips og triks</div>
+        <h3>5 prisstrategier som øker inntekten din i nordlyssesongen</h3>
+        <p>Dynamisk prising, minimum antall netter og rabatter for lengre opphold. Konkrete strategier som fungerer i Tromsø-markedet.</p>
+        <div class="article-meta">
+          <span>Desember 2025</span>
+          <span class="dot"></span>
+          <span>6 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="guide">
+      <div class="article-card-img">
+        <div class="ph-icon">🏠</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-guide">Guide</div>
+        <h3>Hva er Airbnb-forvaltning? En enkel forklaring</h3>
+        <p>Hva gjør egentlig et forvaltningsselskap, hva koster det, og er det verdt det? Vi forklarer konseptet for deg som vurderer å leie ut.</p>
+        <div class="article-meta">
+          <span>Desember 2025</span>
+          <span class="dot"></span>
+          <span>4 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="skatt">
+      <div class="article-card-img">
+        <div class="ph-icon">📋</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-skatt">Skatt og økonomi</div>
+        <h3>Fradrag ved korttidsutleie: hva kan du trekke fra?</h3>
+        <p>Renhold, vedlikehold, forsikring, møbler og avskrivning. En oversikt over fradragsmulighetene som mange boligeiere ikke kjenner til.</p>
+        <div class="article-meta">
+          <span>November 2025</span>
+          <span class="dot"></span>
+          <span>5 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="article-card fade-up" data-category="regelverk">
+      <div class="article-card-img">
+        <div class="ph-icon">🔑</div>
+        <div class="ph-label">Illustrasjon</div>
+      </div>
+      <div class="article-card-body">
+        <div class="article-tag tag-regelverk">Regelverk</div>
+        <h3>Trenger du å melde korttidsutleie til kommunen i Tromsø?</h3>
+        <p>Registreringsplikt, brannkrav og lokale regler. Vi går gjennom hva Tromsø kommune krever av deg som korttidsutleier.</p>
+        <div class="article-meta">
+          <span>November 2025</span>
+          <span class="dot"></span>
+          <span>4 min lesetid</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="blog-cta">
+  <div class="blog-cta-card">
+    <div class="blog-cta-text">
+      <h2>Vil du vite hva din bolig kan tjene?</h2>
+      <p>Få et gratis, detaljert inntektsestimat basert på din adresse og boligtype. Ingen forpliktelser.</p>
+    </div>
+    <div class="blog-cta-form">
+      <div class="blog-cta-row">
+        <input type="text" class="blog-cta-input" placeholder="Navn" autocomplete="name">
+        <input type="tel" class="blog-cta-input" placeholder="Telefon (+47)" autocomplete="tel">
+      </div>
+      <div class="blog-cta-row">
+        <input type="text" class="blog-cta-input" placeholder="Adresse i Tromsø" style="flex:2;">
+        <a href="kontakt.html" class="btn-white">
+          Gratis vurdering
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="blog-cta-note">Ingen forpliktelser · Svar innen 24 timer</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Artic<span>Host</span></div>
+        <div class="footer-org">
+          ArticHost AS · Org.nr. 000 000 000<br>
+          Storgata 00, 9008 Tromsø
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Kontakt oss</div>
+        <p>
+          <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+          <a href="tel:+4700000000">+47 000 00 000</a>
+        </p>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Lenker</div>
+        <p>
+          <a href="index.html#kalkulator">Inntektskalkulator</a><br>
+          <a href="index.html#slik-virker-det">Slik fungerer det</a><br>
+          <a href="faq.html">Vanlige spørsmål</a><br>
+          <a href="index.html#pris">Priser</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ArticHost AS · Alle rettigheter reservert</p>
+      <div class="footer-links">
+        <a href="personvern.html">Personvern</a>
+        <a href="vilkar.html">Vilkår</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobile-overlay');
+hamburger.addEventListener('click', () => {
+  const open = mobileOverlay.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileOverlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Category filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const allCards = document.querySelectorAll('.article-card, .featured-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+
+    allCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Hide featured label when filtering
+    const featuredLabel = document.querySelector('.featured-label');
+    const featuredCard = document.querySelector('.featured-card');
+    if (filter !== 'all' && featuredCard.style.display === 'none') {
+      featuredLabel.style.display = 'none';
+    } else {
+      featuredLabel.style.display = '';
+    }
+  });
+});
+
+// Scroll animations
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
