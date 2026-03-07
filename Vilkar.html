@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vilkår for bruk | ArticHost</title>
+<meta name="description" content="Vilkår for bruk av ArticHost sine tjenester og nettside. Les om betingelsene for Airbnb-forvaltning i Tromsø.">
+<meta property="og:title" content="Vilkår for bruk | ArticHost">
+<meta property="og:description" content="Vilkår for bruk av ArticHost sine tjenester og nettside — Airbnb-forvaltning i Tromsø.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://artichost.no/vilkar">
+<link rel="canonical" href="https://artichost.no/vilkar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #F8F7F4;
+  --stone: #F2EFE9;
+  --ink: #1A1A1A;
+  --ink-mid: #3D3D3D;
+  --muted: #6B6B6B;
+  --border: #E4E0D9;
+  --accent: #2B4C6F;
+  --accent-light: #EAF0F6;
+  --accent-hover: #223d5a;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── NAVIGATION ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1180px; margin: 0 auto;
+  padding: 1.2rem 2.5rem;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 400;
+  color: var(--ink); letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.logo span { color: var(--accent); }
+.nav-links { list-style: none; display: flex; gap: 2.2rem; align-items: center; }
+.nav-links a {
+  font-size: 0.875rem; color: var(--ink-mid);
+  text-decoration: none; font-weight: 400;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.55rem 1.3rem; border-radius: 6px;
+  font-weight: 500; font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.nav-links .nav-cta { color: #fff; }
+.nav-links .nav-cta:hover { background: var(--accent-hover); color: #fff; }
+.hamburger {
+  display: none; flex-direction: column; justify-content: center;
+  gap: 5px; cursor: pointer; padding: 8px; background: none; border: none;
+  min-width: 44px; min-height: 44px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-overlay {
+  display: none; position: fixed; top: 61px; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.98); z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 2rem; backdrop-filter: blur(10px);
+}
+.mobile-overlay.open { display: flex; }
+.mobile-overlay a {
+  font-size: 1.3rem; color: var(--ink); text-decoration: none;
+  font-weight: 400; font-family: var(--serif);
+}
+.mobile-overlay a:hover { color: var(--accent); }
+.mobile-overlay .mob-cta {
+  background: var(--accent); color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 6px;
+  font-family: var(--sans); font-weight: 500; font-size: 1rem;
+}
+
+/* ─── PAGE HEADER ─── */
+.page-header {
+  padding-top: 80px;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+}
+.page-header-inner {
+  max-width: 1180px; margin: 0 auto; padding: 5rem 2.5rem 3.5rem;
+}
+.page-header .breadcrumb {
+  font-size: 0.78rem; color: var(--muted); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.page-header .breadcrumb a {
+  color: var(--accent); text-decoration: none;
+}
+.page-header .breadcrumb a:hover { text-decoration: underline; }
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 400; line-height: 1.18;
+  letter-spacing: -0.02em; color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+.page-header .updated {
+  font-size: 0.82rem; color: var(--muted);
+}
+
+/* ─── CONTENT ─── */
+.legal-content {
+  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 240px 1fr; gap: 4rem;
+  padding-top: 3.5rem; padding-bottom: 5rem;
+}
+.toc {
+  position: sticky; top: 100px; align-self: start;
+}
+.toc-title {
+  font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.toc-list {
+  list-style: none; display: flex; flex-direction: column; gap: 0;
+}
+.toc-list a {
+  display: block; font-size: 0.82rem; color: var(--ink-mid);
+  text-decoration: none; padding: 0.45rem 0 0.45rem 1rem;
+  border-left: 1.5px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1.4;
+}
+.toc-list a:hover,
+.toc-list a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.legal-body {}
+.legal-body h2 {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 400;
+  color: var(--ink); margin-top: 3rem; margin-bottom: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.legal-body h2:first-child {
+  margin-top: 0; padding-top: 0; border-top: none;
+}
+.legal-body h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem; font-weight: 500;
+  color: var(--ink); margin-top: 1.8rem; margin-bottom: 0.5rem;
+}
+.legal-body p {
+  font-size: 0.9rem; color: var(--ink-mid);
+  line-height: 1.8; margin-bottom: 1rem;
+}
+.legal-body ul, .legal-body ol {
+  margin-bottom: 1rem; padding-left: 1.2rem;
+}
+.legal-body li {
+  font-size: 0.9rem; color: var(--ink-mid);
+  line-height: 1.8; margin-bottom: 0.3rem;
+}
+.legal-body a {
+  color: var(--accent); text-decoration: none;
+}
+.legal-body a:hover { text-decoration: underline; }
+.legal-body .info-box {
+  background: var(--accent-light);
+  border: 1px solid #D0DEE9;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.legal-body .info-box p {
+  color: var(--ink); font-size: 0.85rem; margin-bottom: 0;
+}
+.legal-body .info-box strong {
+  color: var(--accent);
+}
+.legal-body .highlight-box {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.legal-body .highlight-box p {
+  color: var(--ink-mid); font-size: 0.85rem; margin-bottom: 0;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 2rem;
+}
+.footer-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0 2.5rem;
+}
+.footer-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 2rem; padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap; gap: 2rem;
+}
+.footer-logo { font-family: var(--serif); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.footer-logo span { color: var(--accent); }
+.footer-org { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+.footer-contact-title { font-size: 0.72rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.footer-contact p { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.8; }
+.footer-contact a { color: var(--accent); text-decoration: none; }
+.footer-contact a:hover { text-decoration: underline; }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 0.75rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-inner { padding: 1.2rem 1.5rem; }
+  .page-header-inner { padding: 4rem 1.5rem 2.5rem; }
+  .legal-content {
+    grid-template-columns: 1fr;
+    gap: 0; padding: 0 1.5rem;
+    padding-top: 2.5rem; padding-bottom: 3.5rem;
+  }
+  .toc {
+    position: relative; top: auto;
+    padding-bottom: 2rem; margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-top { flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Hovednavigasjon">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="ArticHost, til forsiden">Artic<span>Host</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#kalkulator">Inntekt</a></li>
+      <li><a href="index.html#slik-virker-det">Prosess</a></li>
+      <li><a href="index.html#om-oss">Om oss</a></li>
+      <li><a href="index.html#pris">Priser</a></li>
+      <li><a href="kontakt.html" class="nav-cta">Gratis vurdering</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-label="Mobilmeny">
+  <a href="index.html#kalkulator" class="mob-link">Inntekt</a>
+  <a href="index.html#slik-virker-det" class="mob-link">Prosess</a>
+  <a href="index.html#om-oss" class="mob-link">Om oss</a>
+  <a href="index.html#pris" class="mob-link">Priser</a>
+  <a href="kontakt.html" class="mob-cta mob-link">Gratis vurdering</a>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Hjem</a>
+      <span>›</span>
+      <span>Vilkår for bruk</span>
+    </div>
+    <h1>Vilkår for bruk</h1>
+    <p class="updated">Sist oppdatert: 7. mars 2026</p>
+  </div>
+</header>
+
+<div class="legal-content">
+  <aside class="toc" aria-label="Innholdsfortegnelse">
+    <div class="toc-title">Innhold</div>
+    <ol class="toc-list">
+      <li><a href="#innledning">1. Innledning</a></li>
+      <li><a href="#tjenestebeskrivelse">2. Tjenestebeskrivelse</a></li>
+      <li><a href="#forvaltningsavtalen">3. Forvaltningsavtalen</a></li>
+      <li><a href="#provisjon-betaling">4. Provisjon og betaling</a></li>
+      <li><a href="#eiers-forpliktelser">5. Eiers forpliktelser</a></li>
+      <li><a href="#artikelhosts-forpliktelser">6. ArticHosts forpliktelser</a></li>
+      <li><a href="#renhold-vedlikehold">7. Renhold og vedlikehold</a></li>
+      <li><a href="#forsikring-skader">8. Forsikring og skader</a></li>
+      <li><a href="#bruk-av-boligen">9. Eiers bruk av boligen</a></li>
+      <li><a href="#oppsigelse">10. Oppsigelse</a></li>
+      <li><a href="#ansvarsbegrensning">11. Ansvarsbegrensning</a></li>
+      <li><a href="#nettside-bruk">12. Bruk av nettsiden</a></li>
+      <li><a href="#kalkulator-vilkar">13. Inntektskalkulatoren</a></li>
+      <li><a href="#immaterielle">14. Immaterielle rettigheter</a></li>
+      <li><a href="#endringer-vilkar">15. Endringer i vilkårene</a></li>
+      <li><a href="#lovvalg">16. Lovvalg og tvisteløsning</a></li>
+      <li><a href="#kontakt-vilkar">17. Kontakt</a></li>
+    </ol>
+  </aside>
+
+  <article class="legal-body">
+
+    <h2 id="innledning">1. Innledning</h2>
+    <p>Disse vilkårene regulerer bruk av nettsiden artichost.no og tjenestene som leveres av ArticHost AS (under stiftelse), organisasjonsnummer 000 000 000, med forretningsadresse Storgata 00, 9008 Tromsø («ArticHost», «vi», «oss»).</p>
+    <p>Ved å bruke nettsiden vår eller inngå en forvaltningsavtale med oss, aksepterer du disse vilkårene. Dersom du ikke aksepterer vilkårene, ber vi deg om å ikke bruke nettsiden eller tjenestene våre.</p>
+
+    <h2 id="tjenestebeskrivelse">2. Tjenestebeskrivelse</h2>
+    <p>ArticHost tilbyr fullservice forvaltning av korttidsutleie for boligeiere i Tromsø. Tjenesten omfatter:</p>
+    <ul>
+      <li>Profesjonell fotografering av boligen</li>
+      <li>Opprettelse og optimalisering av annonser på Airbnb, Booking.com, VRBO og Google Vacation Rentals</li>
+      <li>Dynamisk prisoptimalisering tilpasset sesong og markedsforhold</li>
+      <li>Gjestekommunikasjon døgnet rundt (24/7)</li>
+      <li>Koordinering av innsjekk og utsjekk</li>
+      <li>Koordinering av profesjonelt renhold etter hvert opphold</li>
+      <li>Vedlikeholdskoordinering</li>
+      <li>Eierdashboard med sanntidsinnsyn i bookinger og inntekter</li>
+      <li>Månedlig inntektsrapport med full provisjonsberegning</li>
+    </ul>
+    <p>Det nøyaktige omfanget av tjenestene reguleres av den individuelle forvaltningsavtalen mellom eier og ArticHost.</p>
+
+    <h2 id="forvaltningsavtalen">3. Forvaltningsavtalen</h2>
+    <p>Forvaltningsforholdet reguleres av en separat, skriftlig forvaltningsavtale som inngås mellom eier og ArticHost. Forvaltningsavtalen er et juridisk bindende dokument som spesifiserer:</p>
+    <ul>
+      <li>Boligens adresse og beskrivelse</li>
+      <li>Provisjonssats og betalingsbetingelser</li>
+      <li>Avtalens varighet og oppsigelsestid</li>
+      <li>Partenes rettigheter og forpliktelser</li>
+      <li>Spesielle vilkår knyttet til den aktuelle boligen</li>
+    </ul>
+    <p>Ved motstrid mellom disse generelle vilkårene og den individuelle forvaltningsavtalen, går forvaltningsavtalen foran.</p>
+
+    <h2 id="provisjon-betaling">4. Provisjon og betaling</h2>
+
+    <h3>4.1 Provisjon</h3>
+    <p>ArticHost tar en provisjon på mellom 15 % og 20 % av nettoinntekten (ekskl. mva.), avhengig av avtalens vilkår og kontraktslengde. Provisjonen dekker alle tjenester beskrevet i punkt 2, inkludert fotografering, annonsering, gjestekommunikasjon, innsjekk/utsjekk-koordinering, vedlikeholdskoordinering og rapportering.</p>
+
+    <h3>4.2 Renholdsgebyr</h3>
+    <p>Renholdsgebyret belastes gjestene som et synlig tillegg i bookingprisen og tilfaller renholdspartneren. Eier betaler ikke for renhold.</p>
+
+    <h3>4.3 Utbetaling</h3>
+    <p>Leieinntekter etter fratrekk av provisjon utbetales månedlig til eiers registrerte bankkonto. Utbetalingsdatoer og detaljer fremgår av forvaltningsavtalen. Hver utbetaling ledsages av en detaljert inntektsrapport.</p>
+
+    <h3>4.4 Ingen oppstartsgebyr</h3>
+    <p>ArticHost krever ingen oppstartsgebyr, etableringsgebyr eller andre engangsbeløp. Provisjonen er den eneste kostnaden for eier.</p>
+
+    <div class="highlight-box">
+      <p><strong>Merk:</strong> Provisjonssatsen og betalingsbetingelsene som gjelder for ditt forvaltningsforhold fremgår alltid av din individuelle forvaltningsavtale, og kan avvike fra de generelle satsene beskrevet her.</p>
+    </div>
+
+    <h2 id="eiers-forpliktelser">5. Eiers forpliktelser</h2>
+    <p>Som eier forplikter du deg til å:</p>
+    <ul>
+      <li>Sikre at boligen er i forskriftsmessig stand og egnet for korttidsutleie</li>
+      <li>Overholde gjeldende lover og regler for korttidsutleie, herunder reglene i eierseksjonsloven (maks 90 dager i eierseksjoner, med mulighet for sameiet å justere mellom 60 og 120 dager) og borettslagsloven (maks 30 dager uten styregodkjenning)</li>
+      <li>Overholde vedtekter og husordensregler i sameiet eller borettslaget</li>
+      <li>Informere ArticHost om eventuelle begrensninger knyttet til utleien</li>
+      <li>Oppgi korrekte opplysninger om boligen og deg selv</li>
+      <li>Rapportere leieinntekter til skattemyndighetene i henhold til gjeldende regler</li>
+      <li>Tegne nødvendige forsikringer for boligen (innboforsikring, husforsikring)</li>
+      <li>Informere ArticHost om planlagt egenbruk i rimelig tid</li>
+    </ul>
+
+    <h2 id="artikelhosts-forpliktelser">6. ArticHosts forpliktelser</h2>
+    <p>ArticHost forplikter seg til å:</p>
+    <ul>
+      <li>Forvalte boligen profesjonelt og i eiers beste interesse</li>
+      <li>Håndtere all gjestekommunikasjon på en vennlig og profesjonell måte</li>
+      <li>Optimalisere priser for å maksimere eiers inntekt</li>
+      <li>Gjennomføre tilstandskontroll med fotodokumentasjon etter hvert opphold</li>
+      <li>Levere månedlige inntektsrapporter med fullstendig oversikt over alle bookinger og provisjonsberegning</li>
+      <li>Gi eier tilgang til eierdashboardet med sanntidsinnsyn</li>
+      <li>Besvare eiers henvendelser innen 2 timer i normal arbeidstid</li>
+      <li>Koordinere renhold og vedlikehold</li>
+      <li>Overholde gjeldende personvernlovgivning ved behandling av personopplysninger</li>
+    </ul>
+
+    <h2 id="renhold-vedlikehold">7. Renhold og vedlikehold</h2>
+
+    <h3>7.1 Renhold</h3>
+    <p>ArticHost koordinerer profesjonelt renhold etter hvert opphold. Renholdet inkluderer skifte av sengetøy og håndklær, og gjennomføres av vår samarbeidspartner. Kostnaden belastes gjesten via bookingprisen.</p>
+
+    <h3>7.2 Vedlikehold</h3>
+    <p>Mindre vedlikeholdsoppgaver som oppdages under tilstandskontroll håndteres av ArticHost etter avtale med eier. For vedlikeholdsarbeid med en kostnad over NOK 1 000 innhentes eiers godkjenning før arbeid igangsettes, med mindre det er akutt (f.eks. vannlekkasje, strømbrudd). Vedlikeholdskostnader betales av eier og kan trekkes fra leieinntekten etter avtale.</p>
+
+    <h2 id="forsikring-skader">8. Forsikring og skader</h2>
+    <p>Alle opphold formidlet via Airbnb er dekket av Airbnbs Host Damage Protection, som gir dekning for skader opptil USD 3 000 000. For bookinger via andre plattformer gjelder den aktuelle plattformens beskyttelsesordning.</p>
+    <p>ArticHost gjennomfører tilstandskontroll med fotodokumentasjon etter hvert opphold. Eventuelle skader registreres umiddelbart og håndteres via plattformens forsikring eller erstatningsordning på vegne av eier.</p>
+    <p>Eier er selv ansvarlig for å opprettholde standard boligforsikring og innboforsikring for eiendommen. ArticHost anbefaler at eier kontakter sitt forsikringsselskap for å sikre at forsikringen dekker korttidsutleie.</p>
+
+    <h2 id="bruk-av-boligen">9. Eiers bruk av boligen</h2>
+    <p>Eier kan fritt blokkere datoer for egenbruk via eierdashboardet, eller ved å gi ArticHost beskjed. Vi fjerner tilgjengeligheten umiddelbart. Allerede bekreftede bookinger kan ikke kanselleres for egenbruk uten at eier dekker eventuelle kanselleringsgebyrer fra plattformene.</p>
+
+    <h2 id="oppsigelse">10. Oppsigelse</h2>
+
+    <h3>10.1 Oppsigelsestid</h3>
+    <p>Forvaltningsavtalen kan sies opp av begge parter med 30 dagers skriftlig varsel, med mindre annet fremgår av den individuelle forvaltningsavtalen.</p>
+
+    <h3>10.2 Allerede bekreftede bookinger</h3>
+    <p>Ved oppsigelse gjennomføres allerede bekreftede bookinger som normalt, med mindre partene avtaler annet. ArticHost mottar provisjon for disse bookingene i henhold til avtalen.</p>
+
+    <h3>10.3 Tilbakelevering</h3>
+    <p>Ved avtalens opphør tilbakeleveres alle nøkler, tilganger og materialer til eier. Eier overtar ansvaret for eventuelle aktive annonser på utleieplattformene.</p>
+
+    <h2 id="ansvarsbegrensning">11. Ansvarsbegrensning</h2>
+    <p>ArticHost er ikke ansvarlig for:</p>
+    <ul>
+      <li>Tap som skyldes gjestens handlinger, utover det som dekkes av plattformenes beskyttelsesordninger</li>
+      <li>Inntektstap som følge av lavere etterspørsel, sesongvariasjoner eller endringer i markedsforholdene</li>
+      <li>Tap som skyldes endringer i lover, regler eller sameievedtekter som påvirker muligheten til korttidsutleie</li>
+      <li>Tap som skyldes force majeure (naturkatastrofer, pandemi, krig, streik og lignende forhold utenfor vår kontroll)</li>
+      <li>Indirekte tap eller følgeskader</li>
+    </ul>
+    <p>ArticHosts samlede erstatningsansvar er begrenset til den totale provisjonen mottatt fra eier de siste 6 måneder forut for den hendelsen som gir grunnlag for kravet.</p>
+
+    <h2 id="nettside-bruk">12. Bruk av nettsiden</h2>
+    <p>Nettsiden artichost.no er beregnet for informasjon om ArticHosts tjenester og for innhenting av boligvurderinger. Ved bruk av nettsiden aksepterer du at:</p>
+    <ul>
+      <li>Informasjonen på nettsiden er av generell karakter og utgjør ikke juridisk eller økonomisk rådgivning</li>
+      <li>Du bruker kontaktskjemaet til sitt tiltenkte formål</li>
+      <li>Du oppgir korrekte opplysninger i skjemaer</li>
+      <li>Du ikke forsøker å forstyrre, ødelegge eller manipulere nettsidens funksjonalitet</li>
+    </ul>
+
+    <h2 id="kalkulator-vilkar">13. Inntektskalkulatoren</h2>
+    <p>Inntektskalkulatoren på nettsiden gir et estimat basert på historiske markedsdata fra AirDNA og sesongbaserte beregninger for Tromsø. Estimatene er veiledende og utgjør ingen garanti for fremtidig inntekt.</p>
+    <p>Faktisk inntekt avhenger av en rekke faktorer, herunder boligens beliggenhet, standard, innredning, tilgjengelighet, sesong, markedsforhold og gjestevurderinger. For et mer nøyaktig estimat tilpasset din bolig, tilbyr vi en gratis boligvurdering.</p>
+
+    <h2 id="immaterielle">14. Immaterielle rettigheter</h2>
+    <p>Alt innhold på nettsiden, inkludert tekst, bilder, design, logoer og kode, tilhører ArticHost AS eller våre lisensgivere og er beskyttet av opphavsrettsloven. Innholdet kan ikke kopieres, distribueres eller brukes uten skriftlig samtykke fra ArticHost.</p>
+    <p>Fotografier tatt av ArticHost i forbindelse med forvaltningsoppdraget kan benyttes av ArticHost til markedsføring og annonsering, med mindre eier skriftlig reserverer seg mot dette.</p>
+
+    <h2 id="endringer-vilkar">15. Endringer i vilkårene</h2>
+    <p>ArticHost forbeholder seg retten til å endre disse vilkårene. Endringer trer i kraft 30 dager etter publisering på nettsiden. For eksisterende kunder med forvaltningsavtale vil vesentlige endringer varsles skriftlig per e-post.</p>
+
+    <h2 id="lovvalg">16. Lovvalg og tvisteløsning</h2>
+    <p>Disse vilkårene er underlagt norsk lov. Eventuelle tvister som oppstår i forbindelse med vilkårene eller tjenestene skal først forsøkes løst i minnelighet. Dersom partene ikke oppnår enighet, er Nord-Troms tingrett verneting.</p>
+    <p>For forbrukere gjelder forbrukerlovgivningens ufravikelige regler. Du kan også klage til Forbrukertilsynet eller bringe saken inn for Forbrukerrådet. Mer informasjon finner du på <a href="https://www.forbrukertilsynet.no" target="_blank" rel="noopener">forbrukertilsynet.no</a>.</p>
+
+    <h2 id="kontakt-vilkar">17. Kontakt</h2>
+    <p>Har du spørsmål om disse vilkårene, ta gjerne kontakt:</p>
+    <div class="info-box">
+      <p><strong>ArticHost AS</strong><br>
+      E-post: <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+      Telefon: <a href="tel:+4700000000">+47 000 00 000</a><br>
+      Adresse: Storgata 00, 9008 Tromsø</p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Artic<span>Host</span></div>
+        <div class="footer-org">
+          ArticHost AS · Org.nr. 000 000 000<br>
+          Storgata 00, 9008 Tromsø
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Kontakt oss</div>
+        <p>
+          <a href="mailto:hei@artichost.no">hei@artichost.no</a><br>
+          <a href="tel:+4700000000">+47 000 00 000</a>
+        </p>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-title">Lenker</div>
+        <p>
+          <a href="index.html#kalkulator">Inntektskalkulator</a><br>
+          <a href="index.html#slik-virker-det">Slik fungerer det</a><br>
+          <a href="index.html#faq">Vanlige spørsmål</a><br>
+          <a href="index.html#pris">Priser</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ArticHost AS · Alle rettigheter reservert</p>
+      <div class="footer-links">
+        <a href="personvern.html">Personvern</a>
+        <a href="vilkar.html">Vilkår</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobile-overlay');
+hamburger.addEventListener('click', () => {
+  const open = mobileOverlay.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.querySelectorAll('.mob-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileOverlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+// Active TOC highlight on scroll
+const tocLinks = document.querySelectorAll('.toc-list a');
+const sections = [];
+tocLinks.forEach(link => {
+  const id = link.getAttribute('href').substring(1);
+  const el = document.getElementById(id);
+  if (el) sections.push({ id, el, link });
+});
+
+function updateToc() {
+  let current = sections[0];
+  for (const s of sections) {
+    if (s.el.getBoundingClientRect().top <= 120) current = s;
+  }
+  tocLinks.forEach(l => l.classList.remove('active'));
+  if (current) current.link.classList.add('active');
+}
+window.addEventListener('scroll', updateToc, { passive: true });
+updateToc();
+</script>
+</body>
+</html>
