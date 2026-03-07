@@ -656,6 +656,74 @@ input[type="range"]::-moz-range-track {
   font-size: 0.88rem; color: var(--ink-mid); line-height: 1.75;
 }
 
+/* ─── FAQ LINK ─── */
+.faq-all-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--accent); font-size: 0.88rem; font-weight: 500;
+  text-decoration: none; margin-top: 1.5rem;
+  transition: gap 0.2s;
+}
+.faq-all-link:hover { gap: 0.7rem; }
+
+/* ─── BLOG TEASER ─── */
+.blog-teaser-section { padding: 5rem 0; background: var(--white); border-top: 1px solid var(--border); }
+.blog-teaser-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+.blog-teaser-header .section-sub { margin-bottom: 0; }
+.blog-teaser-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.blog-teaser-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: 10px; overflow: hidden;
+  text-decoration: none; color: inherit;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex; flex-direction: column;
+}
+.blog-teaser-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.btc-img {
+  background: var(--stone); height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--border);
+  font-size: 2rem; opacity: 0.4;
+}
+.btc-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.btc-tag {
+  display: inline-block; font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.15rem 0.5rem; border-radius: 3px;
+  margin-bottom: 0.7rem; width: fit-content;
+}
+.btc-tag-guide { background: var(--accent-light); color: var(--accent); }
+.btc-tag-skatt { background: var(--green-light); color: var(--green); }
+.btc-tag-marked { background: #FFF3E0; color: #B8730C; }
+.btc-body h3 {
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+  color: var(--ink); line-height: 1.35; margin-bottom: 0.5rem;
+}
+.btc-body p {
+  font-size: 0.8rem; color: var(--muted); line-height: 1.7;
+  flex: 1;
+}
+.btc-meta {
+  font-size: 0.72rem; color: var(--muted);
+  padding-top: 0.8rem; margin-top: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.blog-view-all {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--accent); font-size: 0.88rem; font-weight: 500;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+.blog-view-all:hover { gap: 0.7rem; }
+
 /* ─── PRICING ─── */
 .price-section { padding: 7rem 0; background: var(--off-white); }
 .price-layout {
@@ -873,6 +941,11 @@ footer {
   input[type="range"] { height: 4px; }
 
   .dc-metrics { grid-template-columns: repeat(3,1fr); }
+
+  /* Blog teaser responsive */
+  .blog-teaser-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .blog-teaser-section { padding: 3.5rem 0; }
+  .blog-teaser-header { flex-direction: column; gap: 1rem; align-items: flex-start; }
 }
 
 @media (max-width: 420px) {
@@ -892,7 +965,7 @@ footer {
     <ul class="nav-links">
       <li><a href="#kalkulator">Inntekt</a></li>
       <li><a href="#slik-virker-det">Prosess</a></li>
-      <li><a href="#om-oss">Om oss</a></li>
+      <li><a href="blogg.html">Ressurser</a></li>
       <li><a href="#pris">Priser</a></li>
       <li><a href="tel:+4700000000" class="nav-phone nav-phone-desktop" aria-label="Ring oss"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-1px" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +47 000 00 000</a></li>
       <li><a href="kontakt.html" class="nav-cta">Gratis vurdering</a></li>
@@ -906,7 +979,7 @@ footer {
 <div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-label="Mobilmeny">
   <a href="#kalkulator" class="mob-link">Inntekt</a>
   <a href="#slik-virker-det" class="mob-link">Prosess</a>
-  <a href="#om-oss" class="mob-link">Om oss</a>
+  <a href="blogg.html" class="mob-link">Ressurser</a>
   <a href="#pris" class="mob-link">Priser</a>
   <a href="tel:+4700000000" class="mob-link">+47 000 00 000</a>
   <a href="kontakt.html" class="mob-cta mob-link">Gratis vurdering</a>
@@ -1338,6 +1411,10 @@ footer {
         <div class="section-label">Spørsmål og trygghet</div>
         <h2>Vi forstår at du vil<br>vite alt først.</h2>
         <p class="section-sub">Å gi nøklene til noen andre er en stor avgjørelse. Her er svar på det folk spør oss om oftest.</p>
+        <a href="faq.html" class="faq-all-link">
+          Se alle vanlige spørsmål
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="faq-list">
         <div class="faq-item">
@@ -1395,6 +1472,51 @@ footer {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog teaser section -->
+<section class="blog-teaser-section" aria-label="Fra bloggen">
+  <div class="container">
+    <div class="blog-teaser-header">
+      <div>
+        <div class="section-label">Fra bloggen</div>
+        <h2>Nyttige ressurser for<br>boligeiere</h2>
+      </div>
+      <a href="blogg.html" class="blog-view-all">
+        Se alle artikler
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="blog-teaser-grid">
+      <a href="blogg.html" class="blog-teaser-card fade-up">
+        <div class="btc-img">📊</div>
+        <div class="btc-body">
+          <div class="btc-tag btc-tag-guide">Komplett guide</div>
+          <h3>Airbnb-utleie i Tromsø: den komplette guiden for 2026</h3>
+          <p>Alt du trenger å vite om korttidsutleie i Tromsø — fra regler og skatt til prisstrategier for nordlyssesongen.</p>
+          <div class="btc-meta">Mars 2026 · 12 min lesetid</div>
+        </div>
+      </a>
+      <a href="blogg.html" class="blog-teaser-card fade-up">
+        <div class="btc-img">🧾</div>
+        <div class="btc-body">
+          <div class="btc-tag btc-tag-skatt">Skatt og økonomi</div>
+          <h3>Skatt på Airbnb-inntekter i Norge: hva du må vite</h3>
+          <p>Skattefritt beløp, rapporteringsplikt og fradragsmuligheter. Skattereglene for korttidsutleie forklart enkelt.</p>
+          <div class="btc-meta">Mars 2026 · 7 min lesetid</div>
+        </div>
+      </a>
+      <a href="blogg.html" class="blog-teaser-card fade-up">
+        <div class="btc-img">📈</div>
+        <div class="btc-body">
+          <div class="btc-tag btc-tag-marked">Markedsinnsikt</div>
+          <h3>Airbnb vs. langtidsleie i Tromsø — hva lønner seg?</h3>
+          <p>Vi sammenligner reell inntekt fra korttidsutleie med langtidsleie for ulike boligtyper i Tromsø.</p>
+          <div class="btc-meta">Januar 2026 · 5 min lesetid</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1466,7 +1588,8 @@ footer {
         <p>
           <a href="#kalkulator">Inntektskalkulator</a><br>
           <a href="#slik-virker-det">Slik fungerer det</a><br>
-          <a href="#faq">Vanlige spørsmål</a><br>
+          <a href="faq.html">Vanlige spørsmål</a><br>
+          <a href="blogg.html">Blogg og ressurser</a><br>
           <a href="#pris">Priser</a>
         </p>
       </div>
