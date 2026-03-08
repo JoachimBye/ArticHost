@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb-utleie i Tromsø: den komplette guiden for 2026 | ArticHost</title>
+<meta name="description" content="Tromsø opplever en historisk turismeboom. Les den komplette guiden for Airbnb-utleie i 2026, med tall på inntekter, belegg og prisstrategier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ─── GLOBALE STILER FRA INDEX ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white: #FFFFFF; --off-white: #F8F7F4; --stone: #F2EFE9;
+  --ink: #1A1A1A; --ink-mid: #3D3D3D; --muted: #6B6B6B;
+  --border: #E4E0D9; --accent: #2B4C6F; --accent-light: #EAF0F6;
+  --accent-hover: #223d5a; --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+body { background: var(--white); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+
+/* ─── NAVIGASJON (Forenklet for blogg) ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.98); border-bottom: 1px solid var(--border);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1180px; margin: 0 auto; padding: 1.2rem 2.5rem; }
+.logo { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: var(--ink); }
+.logo span { color: var(--accent); }
+.back-link { font-size: 0.85rem; color: var(--ink-mid); display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+
+/* ─── ARTIKKEL HEADER ─── */
+.article-header { padding: 140px 2.5rem 4rem; background: var(--off-white); text-align: center; border-bottom: 1px solid var(--border); }
+.article-header-inner { max-width: 800px; margin: 0 auto; }
+.article-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 4px; margin-bottom: 1.5rem; }
+.article-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 1.5rem; }
+.article-meta { display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: 0.85rem; color: var(--muted); }
+.article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
+
+/* ─── ARTIKKEL INNHOLD ─── */
+.blog-content { max-width: 760px; margin: 0 auto; padding: 4rem 2.5rem; }
+.blog-content p { font-size: 1.1rem; line-height: 1.8; color: var(--ink-mid); margin-bottom: 1.5rem; }
+.blog-content h2 { font-family: var(--serif); font-size: 2rem; color: var(--ink); margin: 3rem 0 1rem; }
+.blog-content h3 { font-family: var(--sans); font-size: 1.3rem; font-weight: 500; color: var(--ink); margin: 2rem 0 1rem; }
+.blog-content ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.blog-content li { font-size: 1.1rem; color: var(--ink-mid); margin-bottom: 0.5rem; }
+.blog-content .source { display: inline-block; font-size: 0.75rem; color: var(--muted); background: var(--stone); padding: 0.1rem 0.4rem; border-radius: 3px; vertical-align: super; margin-left: 2px; }
+.blog-content .highlight-box { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0; }
+.blog-content .highlight-box p { margin-bottom: 0; font-size: 1.05rem; }
+
+/* ─── TABELL ─── */
+.blog-table-wrapper { overflow-x: auto; margin: 2rem 0; border-radius: 8px; border: 1px solid var(--border); }
+.blog-table { width: 100%; border-collapse: collapse; text-align: left; }
+.blog-table th { background: var(--off-white); padding: 1rem; font-weight: 500; font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+.blog-table td { padding: 1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--ink-mid); }
+.blog-table tr:last-child td { border-bottom: none; }
+
+/* ─── CTA BÅNN ─── */
+.article-footer-cta { background: var(--accent); color: white; text-align: center; padding: 4rem 2.5rem; margin-top: 2rem; }
+.article-footer-cta h2 { font-family: var(--serif); font-size: 2rem; margin-bottom: 1rem; }
+.article-footer-cta p { font-size: 1.05rem; opacity: 0.8; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.btn-white { display: inline-block; background: white; color: var(--accent); padding: 0.9rem 2rem; border-radius: 6px; font-weight: 500; transition: transform 0.2s; }
+.btn-white:hover { transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .article-header { padding: 120px 1.5rem 3rem; }
+  .blog-content { padding: 3rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Artic<span>Host</span></a>
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Tilbake til oversikten
+    </a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="article-header-inner">
+    <div class="article-tag">Komplett Guide</div>
+    <h1>Airbnb-utleie i Tromsø: den komplette guiden for 2026</h1>
+    <div class="article-meta">
+      <span>Av Joachim Nordmo Bye</span>
+      <span class="dot"></span>
+      <span>Oppdatert Mars 2026</span>
+      <span class="dot"></span>
+      <span>12 min lesetid</span>
+    </div>
+  </div>
+</header>
+
+<main class="blog-content">
+  <p>Tromsø opplever en historisk turismeboom drevet av nordlysturisme, solmaksimum og en rekordhøy internasjonal etterspørsel. For boligeiere i Nordens Paris har dette skapt et av Europas mest innbringende markeder for korttidsutleie. Men med økt inntjening kommer også et strengere regelverk.</p>
+  
+  <h2>Markedet i tall</h2>
+  <p>Tromsø har for øyeblikket mellom 2 000 og 2 600 aktive Airbnb-annonser, avhengig av hvordan man definerer bygrensen. Data fra analysebyrået AirROI <span class="source">AirROI, 2026</span> viser at plattformen Airbnb dominerer fullstendig med 98 % av alle annonser, mens konkurrenter som Vrbo kun utgjør 1 %.</p>
+  
+  <p>Boligprofilen i Tromsø er tydelig:</p>
+  <ul>
+    <li><strong>Hele boliger:</strong> Utgjør hele 87 % av markedet <span class="source">AirDNA, 2026</span>.</li>
+    <li><strong>Størrelse:</strong> 1-soveroms boliger dominerer med 48 %, etterfulgt av 2-soverom (29 %) og 3-soverom (15 %).</li>
+    <li><strong>Kapasitet:</strong> Den gjennomsnittlige boligen er på 63 m² og tar 4 gjester <span class="source">Likibu</span>.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>Visste du at?</strong> I november 2025 avslørte NRK at Airbnb-inntektene i Tromsø nådde en halv milliard kroner bare i første halvår — nesten like mye som hele året før. Tromsø har nå flere Airbnb-enheter enn hotellrom <span class="source">NRK Troms og Finnmark</span>.</p>
+  </div>
+
+  <h2>Hvor mye kan du egentlig tjene?</h2>
+  <p>Inntektspotensialet varierer voldsomt basert på profesjonalitet. Mens den gjennomsnittlige (median) årsinntekten ligger på ca. 252 000 NOK, viser tallene at de som driver profesjonelt tjener betydelig mer. Topp 10 % av vertene i Tromsø drar inn over 785 000 NOK i året <span class="source">AirROI</span>.</p>
+
+  <div class="blog-table-wrapper">
+    <table class="blog-table">
+      <thead>
+        <tr>
+          <th>Metrikk</th>
+          <th>Gjennomsnitt (Median)</th>
+          <th>Topp 10 % av verter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Belegg (Occupancy)</td>
+          <td>47 %</td>
+          <td>84 % +</td>
+        </tr>
+        <tr>
+          <td>Døgnpris (ADR)</td>
+          <td>~ 2 050 NOK ($195)</td>
+          <td>~ 4 300 NOK ($412+)</td>
+        </tr>
+        <tr>
+          <td>Estimert Årsinntekt</td>
+          <td>252 000 NOK</td>
+          <td>785 000 NOK +</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Vinteren er høysesong</h2>
+  <p>Tromsø er unik i Norge ved at vinteren er den desidert mest innbringende perioden. Det globale fenomenet "Aurora-turisme" er nå en milliardindustri. Desember er den absolutte toppverdien, hvor en median bolig gjerne drar inn over 56 000 kr (ca. $5 329) på én måned med et belegg på over 73 % <span class="source">AirROI</span>. Inntektsforskjellen mellom topp-måneden desember og bunn-måneden mai er på massive 213 %.</p>
+
+  <h2>Kort om regelverket du må kjenne til</h2>
+  <p>Både nasjonale og lokale myndigheter følger tett med på Tromsø. Dette er de to viktigste lovene du må forholde deg til for korttidsutleie (utleie under 30 sammenhengende døgn):</p>
+  <ul>
+    <li><strong>Eierseksjonsloven (§ 24):</strong> Begrenser korttidsutleie av hele seksjonen til 90 døgn i året. (Kan justeres mellom 60 og 120 av sameiet).</li>
+    <li><strong>Borettslagsloven (§ 5-4):</strong> Enda strengere; tillater kun korttidsutleie i inntil 30 døgn per år uten særskilt godkjenning fra styret.</li>
+    <li>Selveide eneboliger har per dags dato ingen slik nasjonal dagsbegrensning.</li>
+  </ul>
+  <p>For boligeiere betyr dette at profesjonell prising i de mest innbringende 90 (eller 30) døgnene av året er helt avgjørende for å maksimere avkastningen innenfor lovens rammer.</p>
+</main>
+
+<div class="article-footer-cta">
+  <h2>Klar for å maksimere din inntekt?</h2>
+  <p>La oss ta hånd om alt fra prising til vask og gjestekommunikasjon. Få en gratis og uforpliktende vurdering av ditt inntektspotensial i Tromsø.</p>
+  <a href="kontakt.html" class="btn-white">Be om inntektsestimat</a>
+</div>
+
+</body>
+</html>
